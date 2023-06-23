@@ -47,3 +47,5 @@ nav:
   - Home: index.md
   - Musings of the individual:
     - My First Blog: musings/first_blog.md
+  - Notes:
+    - How to register domain name: web/how_to_apply_domain_name.md
