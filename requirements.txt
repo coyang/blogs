@@ -1,0 +1,7 @@
+mkdocs>=1.0.4
+mkdocs-material
+mkdocs-markmap
+mkdocs-video
+pygments
+mkdocs-build-plantuml-plugin
+mkdocs-mermaid2-plugin
