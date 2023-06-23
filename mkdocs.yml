@@ -46,4 +46,4 @@ theme:
 nav:
   - Home: index.md
   - Musings of the individual:
-    - My First Blog: ./musings/first_blog.md
+    - My First Blog: musings/first_blog.md
