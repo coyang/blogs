@@ -1,5 +1,7 @@
 # Coyang's personal blogs
 
+## [Skill](./personal/skill.md)
+
 ## Musings of the individual
 
 - [First blog](./musings/first_blog.md)
