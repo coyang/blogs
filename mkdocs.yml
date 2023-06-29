@@ -51,3 +51,4 @@ nav:
   - Notes:
     - How to register domain name: web/how_to_apply_domain_name.md
   - Skill: personal/skill.md
+  - Performance tuning tools: performance/performance_tuning_tools.md

@@ -6,6 +6,7 @@
 
 - [First blog](./musings/first_blog.md)
 
+## [Performance tuning tools](./performance/performance_tuning_tools.md)
 
 ## Web
 
