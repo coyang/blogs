@@ -47,7 +47,8 @@ nav:
   - Home: index.md
   - Musings of the individual:
     - My First Blog: musings/first_blog.md
-    - FEYNMAN TECHNIQUE : musings/feynman_technique.md
+    - Feynman Technique : musings/feynman_technique.md
+    - 从平凡到卓越: musings/from_small_to_great.md
   - Notes:
     - How to register domain name: web/how_to_apply_domain_name.md
   - Skill: personal/skill.md

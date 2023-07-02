@@ -5,6 +5,7 @@
 ## Musings of the individual
 
 - [First blog](./musings/first_blog.md)
+- [从平凡到卓越](./musings/from_small_to_great.md)
 
 ## [Performance tuning tools](./performance/performance_tuning_tools.md)
 
