@@ -2,8 +2,7 @@ site_name: COYANG
 site_url: https://coyang.top/
 site_description: Coyang's Personal Blogs
 
-repo_url: https://github.com/coyang/blogs
-repo_name: https://github.com/coyang/blogs
+repo_name: Coyang's Blogs
 site_author: coyang
 docs_dir: docs
 
@@ -49,7 +48,5 @@ nav:
     - My First Blog: musings/first_blog.md
     - Feynman Technique : musings/feynman_technique.md
     - 从平凡到卓越: musings/from_small_to_great.md
-  - Notes:
-    - How to register domain name: web/how_to_apply_domain_name.md
   - Skill: personal/skill.md
   - Performance tuning tools: performance/performance_tuning_tools.md
