@@ -13,6 +13,10 @@
 
 - [How to register domain name](./web/how_to_apply_domain_name.md)
 
+## Diary
+
+- [2023/07/03](./musings/diary/flag.md)
+
 ## QR Code
 
 ![](./images/coyang_qr_code.png)
