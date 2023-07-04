@@ -15,7 +15,8 @@
 
 ## Diary
 
-- [2023/07/03](./musings/diary/flag.md)
+- [2023/07/03: Make a Flag](./musings/diary/flag.md)
+- [2023/07/04: The Art of Patience](./musings/diary/the_art_of_patience.md)
 
 ## QR Code
 
