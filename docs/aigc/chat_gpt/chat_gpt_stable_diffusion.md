@@ -120,6 +120,7 @@ ChatGPT response
 ```
 ### 蒙奇·D·路飞
 
+![](../../images/aigc/one_piece/luffy.jpg)
 
 ChatGPT response
 
@@ -155,6 +156,8 @@ ChatGPT response
 画作。如果您有其他特定的要求或更多细节，请随时告诉我，我将尽力满足您的需求。
 
 ```
+
+![](../../images/aigc/one_piece/luffy2.jpg)
 
 ### 罗罗诺亚·索隆
 
@@ -259,6 +262,8 @@ ChatGPT response
 
 ### 托尼托尼·乔巴
 
+![](../../images/aigc/one_piece/chopper2.jpg)
+
 /key: 托尼托尼·乔巴
 /ar: 16：9
 
@@ -290,6 +295,7 @@ ChatGPT response
 根据这个画面描述和提炼，我将为您创作一幅托尼托尼·乔巴的画作。如果您有其他特定的要求或更多细节，请随时告诉我，我将尽力满足您的需求。
 
 ```
+![](../../images/aigc/one_piece/chopper.jpg)
 
 ### 山治
 
@@ -323,6 +329,7 @@ ChatGPT response
 根据这个画面描述和提炼，我将为您创作一幅山治的画作。如果您有其他特定的要求或更多细节，请随时告诉我，我将尽力满足您的需求。
 
 ```
+![](../../images/aigc/one_piece/sanji.jpg)
 
 ### 妮可·罗宾
 
