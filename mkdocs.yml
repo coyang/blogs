@@ -50,3 +50,4 @@ nav:
     - 从平凡到卓越: musings/from_small_to_great.md
   - Skill: personal/skill.md
   - Performance tuning tools: performance/performance_tuning_tools.md
+  - AIGC: aigc/index.md
