@@ -2,6 +2,8 @@
 
 ## [Skill](./personal/skill.md)
 
+## [Programming Languages](./programming_languages/index.md)
+
 ## Musings of the individual
 
 - [First blog](./musings/first_blog.md)
