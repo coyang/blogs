@@ -1,5 +1,9 @@
 # Coyang's personal blogs
 
+> 一个人要像一支队伍。对着自己的头脑和心灵招兵买马。不气馁，有召唤，爱自由。
+>
+> \-- 毕淑敏
+
 ## [Skill](./personal/skill.md)
 
 ## [Programming Languages](./programming_languages/index.md)
@@ -15,10 +19,7 @@
 
 - [How to register domain name](./web/how_to_apply_domain_name.md)
 
-## Diary
-
-- [2023/07/03: Make a Flag](./musings/diary/flag.md)
-- [2023/07/04: The Art of Patience](./musings/diary/the_art_of_patience.md)
+## [Diary](./musings/diary/index.md)
 
 ## QR Code
 
