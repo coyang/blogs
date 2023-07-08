@@ -17,6 +17,16 @@ Recruit for your own mind and heart.
 Don't be discouraged, have a call, love freedom.
 ```
 
+用ChatGPT 翻译的结果：
+
+```console
+An individual should resemble a team.
+
+Recruit and assemble within their own mind and soul.
+
+Remain undaunted, driven by a sense of purpose, and embrace the spirit of freedom.
+```
+
 想起了陈皓的一篇博客，搬运过来。
 
 以下是陈皓的博客链接及原文。
@@ -146,8 +156,8 @@ need it – 我会在我需要的时候再学”在这个时候就走不通了�
 
 ## 随想
 
-目前离T型人才还是一个人要像一支队伍都有很大差距， 继续努力， 对着自己的头脑和心
-灵招兵买马。
+目前离T型人才(一个人要像一支队伍)有很大差距， 继续努力， 对着自己的头脑和心灵招
+兵买马。
 
 ## References
 
