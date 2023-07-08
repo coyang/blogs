@@ -4,7 +4,7 @@
 >
 > \-- 毕淑敏
 
-## [Skill](./personal/skill.md)
+## [Personal Skill](./personal/skill.md)
 
 ## [Programming Languages](./programming_languages/index.md)
 
