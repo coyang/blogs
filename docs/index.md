@@ -21,6 +21,8 @@
 
 ## [Diary](./musings/diary/index.md)
 
+## [English Learning](./english_learning/index.md)
+
 ## QR Code
 
 ![](./images/coyang_qr_code.png)
