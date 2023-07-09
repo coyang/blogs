@@ -1,8 +1,16 @@
 # Coyang's personal blogs
 
-> 一个人要像一支队伍。对着自己的头脑和心灵招兵买马。不气馁，有召唤，爱自由。
+> 一个人要像一支队伍。
+>
+> 对着自己的头脑和心灵招兵买马。
+>
+> 不气馁，有召唤，爱自由。
 >
 > \-- 毕淑敏
+
+Be a lifelong learner.
+
+I want to always be acquiring new skills and having new experiences.
 
 ## [Personal Skill](./personal/skill.md)
 
