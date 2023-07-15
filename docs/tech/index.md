@@ -11,3 +11,4 @@
 ### Testing method
 
 - [契约测试](./testing/pact_testing.md)
+- [Mutation testing](./testing/mutation_testing.md)
