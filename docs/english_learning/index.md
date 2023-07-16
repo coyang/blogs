@@ -9,5 +9,6 @@
 - [Does AI actually understand us?](./ted/does_ai_actually_understand_us.pdf)
 - [The art of misdirection](./ted/the_art_of_misdirection.pdf)
 - [We could kick-start life on another planet. Should we?](./ted/kick_start_life_on_another_planet.pdf)
+- [Are video calls the best we can do in the age of the metaverse?](./ted/what_can_we_do_in_metaverse.pdf)
 
 ## [Books](./books_note/index.md)
