@@ -45,4 +45,9 @@ theme:
 nav:
   - Home: index.md
   - AIGC: aigc/index.md
-  - Diary: musings/diary/index.md
+  - Personal Skill: personal/skill.md
+  - Programming Languages: programming_languages/index.md
+  - Technology: tech/index.md
+  - English Learning: english_learning/index.md
+  - Tools: tools/index.md
+  - Musings of the individual: musings/index.md

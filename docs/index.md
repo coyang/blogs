@@ -12,19 +12,7 @@ Be a lifelong learner.
 
 Always be acquiring new skills and having new experiences.
 
-## [Personal Skill](./personal/skill.md)
-
-## [Programming Languages](./programming_languages/index.md)
-
-## [Technology](./tech/index.md)
-
-## [Diary](./musings/diary/index.md)
-
-## [English Learning](./english_learning/index.md)
-
-## [Tools](./tools/index.md)
-
-## [Musings of the individual](./musings/index.md)
+---
 
 ## QR Code
 
