@@ -1,26 +1,23 @@
-# mkdocs-template
+# [COYANG's blog](https://coyang.top/)
 
-[Html document](https://coyang.top/)
-
-# Building the docs
+## Building the docs
 
 If you are on EPEL 8 or Fedora, the first thing you will need is to install
 mkdocs, with the following command :
 
-    # sudo yum install -y mkdocs
-
-For Fedora 30+ (run the following in root)
-
-    # dnf install python-pip
-    # pip install -r requirements.txt
+```bash
+sudo yum install -y mkdocs
+```
 
 Then you need to run mkdocs from the root of that repository:
 
-    $ mkdocs build
+```bash
+mkdocs build
+```
 
 The result will be in the `site/` subdirectory, in HTML.
 
-# Building the docs in Docker
+## Building the docs in Docker
 
 Included is a Makefile and a Dockerfile, which enables you to easily build the
 docs inside Docker without installing any dependencies on your system.

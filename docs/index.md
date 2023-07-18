@@ -10,7 +10,7 @@
 
 Be a lifelong learner.
 
-I want to always be acquiring new skills and having new experiences.
+Always be acquiring new skills and having new experiences.
 
 ## [Personal Skill](./personal/skill.md)
 
