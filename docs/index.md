@@ -14,6 +14,4 @@ Always be acquiring new skills and having new experiences.
 
 ---
 
-## QR Code
-
-![](./images/coyang_qr_code.png)
+[QR](./qr.md)
