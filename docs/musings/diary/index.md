@@ -5,3 +5,4 @@
 - [2023/07/07: One person should be like a team](one_person_like_a_team.md)
 - [夜航西飞](west_with_the_night.md)
 - [Heroism](heroism.md)
+- [Ask for help](./ask_questions.md)
