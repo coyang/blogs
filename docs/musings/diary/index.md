@@ -6,3 +6,4 @@
 - [夜航西飞](west_with_the_night.md)
 - [Heroism](heroism.md)
 - [Ask for help](./ask_questions.md)
+- [人生就像一列火车](./ship.md)
