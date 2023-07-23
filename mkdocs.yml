@@ -40,8 +40,8 @@ extra_javascript:
 
 theme:
     name: material
-    logo: images/logo/COYANG-logos.jpeg
-    favicon: images/logo/COYANG-logos_transparent.png
+    logo: images/logo/COYANG-logos_transparent.png
+    favicon: images/logo/COYANG-logos_white.png
     font: false
     features:
         - navigation.instant
