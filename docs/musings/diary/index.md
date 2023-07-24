@@ -7,3 +7,4 @@
 - [Heroism](heroism.md)
 - [Ask for help](./ask_questions.md)
 - [人生就像一列火车](./ship.md)
+- [ChatGPT books](chatgpt_books.md)
