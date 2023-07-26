@@ -1,26 +1,28 @@
 # COYANG's Skill Map
 
-## DevOps
 
-- Version Control
-  - Git
-- CI / CD
-- Tools
-  - Jenkins
-  - Gitlab CI
-  - Github action
+## Agile
+
+- Extreme Programming
+- Scrum
+- DevOps
+  - Version Control
+    - Git
+  - CI / CD
+  - Tools
+    - Jenkins
+    - Gitlab CI
+    - Github action
+- Lean
+- Kanban
 
 ## Development
-
-### Process
-
-- Scrum
 
 ### Programming Languages
 
 - C / C++
-- Python
 - Golang
+- Python
 - Shell
 
 ## Basic knowledge
@@ -28,8 +30,6 @@
 ### Operating System
 
 - Linux
-- coreOS
-- Itron
 
 ### Data structure and Algorithm
 
@@ -41,7 +41,7 @@
 ### Makefile
 
 - [Automake](https://www.gnu.org/software/automake/)
-- [Spec](https://docs.fedoraproject.org/en-US/packaging-guidelines/#_spec_files)
+- [Spec-packaging](https://docs.fedoraproject.org/en-US/packaging-guidelines/#_spec_files)
 
 ### Container
 
@@ -68,6 +68,7 @@
 ### Storage
 
 - Network Storage
+  - Glusterfs
   - AWS EBS
   - NFS v4
   - Ceph
@@ -76,6 +77,7 @@
 - Object Storage
   - AWS S3
   - OpenStack Swift
+  - Ceph
 
 - Block Storage
   - SAN
@@ -160,7 +162,7 @@
     - GlusterFS
     - Ceph
     - Local path
-  - Volume extenstion
+  - Volume extension
     - Rook.io
 - Kube-proxy
   - Iptables
@@ -199,9 +201,10 @@
 - Unit testing
   - TDD
 - Integration testing
+- Contract Testing
 - Robot
   - Robot Framework
-  - robotidy
+  - Robotidy
 
 ## Clean code
 
@@ -212,6 +215,8 @@
   - gofmt
   - shfmt
   - autopep8
+  - ...
+
 - Static analysis
   - coverity
   - clang-tidy
@@ -233,14 +238,8 @@
 - AsciiDoc
 - PlantUML
 
-## Collaboration Tools
-
-- Jira
-- Confluence
-
 ## HW
 
-- RM / OR
 - HW Basic
   - CPU
   - Memory
@@ -254,6 +253,12 @@
 
 ### SW
 
-- DVB-C
-- DVB-B
-- ISDT-B
+- Standard
+  - DVB-C
+  - DVB-B
+  - ISDT-B
+- Feature
+  - Audio
+  - Video
+  - Subtitle
+  - EPG
