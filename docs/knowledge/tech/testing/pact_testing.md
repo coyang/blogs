@@ -1,6 +1,6 @@
 # 契约测试
 
-![PACT contract testing](./../../images/pact_testing/pact-contract-testing.jpg)
+![PACT contract testing](./../../../images/pact_testing/pact-contract-testing.jpg)
 
 ## 什么是契约测试
 

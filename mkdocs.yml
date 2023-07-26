@@ -70,10 +70,7 @@ theme:
 nav:
   - Home: index.md
   - AIGC: aigc/index.md
-  - Personal Skill: personal/skill.md
-  - Programming Languages: programming_languages/index.md
-  - Technology: tech/index.md
+  - Knowledge: knowledge/index.md
   - English Learning: english_learning/index.md
-  - Tools: tools/index.md
   - Musings of the individual: musings/index.md
-  - Software development: software_development/index.md
+  - About: about/index.md
