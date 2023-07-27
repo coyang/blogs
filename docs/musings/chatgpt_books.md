@@ -1,6 +1,6 @@
 # ChatGPT books
 
-![](../../images/diary/chatGPT_books.jpg)
+![](../images/diary/chatGPT_books.jpg)
 
 周末去逛书店，发现有基本关于ChatGPT的书已经上市，并且摆在书店显眼的位置。
 

@@ -1,6 +1,6 @@
 # Ask for help
 
-![ask for help](../../images/diary/ask_question.jpg)
+![ask for help](../images/diary/ask_question.jpg)
 
 看到这段对话有两点感想。
 
