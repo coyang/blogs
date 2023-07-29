@@ -12,3 +12,4 @@
 - [人生就像一列火车](./ship.md)
 - [ChatGPT books](chatgpt_books.md)
 - [Covid19 -2](covid-19.md)
+- [Searching for Bobby Fischer](searching_for_bobby_fischer.md)
