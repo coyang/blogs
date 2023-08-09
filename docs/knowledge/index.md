@@ -2,6 +2,10 @@
 
 ## [Programming languages](./programming_languages/index.md)
 
+### Shell
+
+- [shellcheck](./tools/shell_check.md)
+
 ## [Software development](./software_development/index.md)
 
 ## [Technology](./tech/index.md)
