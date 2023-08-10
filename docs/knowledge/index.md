@@ -5,6 +5,7 @@
 ### Shell
 
 - [shellcheck](./tools/shell_check.md)
+- [shfmt](./tools/shfmt.md)
 
 ## [Software development](./software_development/index.md)
 
