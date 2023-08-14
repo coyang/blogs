@@ -7,6 +7,10 @@
 - [shellcheck](./tools/shell_check.md)
 - [shfmt](./tools/shfmt.md)
 
+### C / C++
+
+- [Valgrind](./tools/valgrind.md)
+
 ## [Software development](./software_development/index.md)
 
 ## [Technology](./tech/index.md)
