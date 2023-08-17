@@ -13,3 +13,8 @@
 ## pdf
 
 - [pdf](./pdf2text.md)
+
+
+## Vscode
+
+- [vscode tips](./vscode.md)
