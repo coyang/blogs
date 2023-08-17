@@ -17,4 +17,4 @@
 
 ## Vscode
 
-- [vscode](./vscode.md)
+- [vscode tips](./vscode.md)
