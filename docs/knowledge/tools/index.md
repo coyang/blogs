@@ -18,3 +18,5 @@
 ## Vscode
 
 - [vscode tips](./vscode.md)
+
+## [Obsidian](./obsidian.md)
