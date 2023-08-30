@@ -13,3 +13,4 @@
 - [ChatGPT books](chatgpt_books.md)
 - [Covid19 -2](covid-19.md)
 - [Searching for Bobby Fischer](searching_for_bobby_fischer.md)
+- [Vault Change License](./vault_change_license.md)
