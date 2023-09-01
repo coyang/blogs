@@ -10,3 +10,5 @@
 4. 团队合作能力
 5. 解决问题的能力
 6. 学习能力和持续改进
+
+[skill map](./personal/skill.md)
