@@ -1,6 +1,6 @@
 # West with the night
 
-![](../images/diary/west_with_the_night.jpg)
+![](../../images/diary/west_with_the_night.jpg)
 
 有感于小伙伴要离开，想起<<夜航西飞>>的一段话。
 
