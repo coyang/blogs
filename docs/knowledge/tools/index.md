@@ -20,3 +20,5 @@
 - [vscode tips](./vscode.md)
 
 ## [Obsidian](./obsidian.md)
+
+## [Git](./git/index.md)
