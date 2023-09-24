@@ -1,6 +1,8 @@
 # Writing Documents in reStructuredText (RST)
 
-reStructuredText is a lightweight markup language that's commonly used for documenting code, software projects, and technical documents. It's simple and easy to learn. Here's a basic overview of how to use RST:
+reStructuredText is a lightweight markup language that's commonly used for
+documenting code, software projects, and technical documents. It's simple and
+easy to learn. Here's a basic overview of how to use RST:
 
 1. **Headers:** Use underlines to create headers. For example:
 
@@ -78,11 +80,14 @@ reStructuredText is a lightweight markup language that's commonly used for docum
 
 ## Using RST Linters
 
-Linters help ensure that your RST documents are formatted correctly and adhere to best practices. Here's how you can use three popular RST linters: `rst-lint`, `doc8`, and `rstcheck`.
+Linters help ensure that your RST documents are formatted correctly and adhere
+to best practices. Here's how you can use three popular RST linters: `rst-lint`,
+`doc8`, and `rstcheck`.
 
 ### rst-lint
 
-`rst-lint` is a tool that checks your RST files for compliance with the Docutils stylesheet and reports any issues.
+`rst-lint` is a tool that checks your RST files for compliance with the Docutils
+stylesheet and reports any issues.
 
 To use `rst-lint`:
 
@@ -98,11 +103,13 @@ To use `rst-lint`:
    rst-lint your_document.rst
    ```
 
-3. `rst-lint` will provide feedback and suggestions for improvements in your RST file.
+3. `rst-lint` will provide feedback and suggestions for improvements in your RST
+file.
 
 ### doc8
 
-`doc8` is a style checker for RST documents that enforces the style guide specified in the OpenStack project.
+`doc8` is a style checker for RST documents that enforces the style guide
+specified in the OpenStack project.
 
 To use `doc8`:
 
@@ -140,8 +147,8 @@ To use `rstcheck`:
 
 3. `rstcheck` will identify syntax errors and suggest improvements.
 
-By following these guidelines and using these linters, you can create well-structured and error-free RST documents for your daily work.
-
+By following these guidelines and using these linters, you can create
+well-structured and error-free RST documents for your daily work.
 
 ## References
 
