@@ -30,3 +30,5 @@
 ## [Obsidian](./obsidian.md)
 
 ## [Git](./git/index.md)
+
+## [ZoomIt](./zoomit.md)
