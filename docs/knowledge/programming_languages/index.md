@@ -7,3 +7,5 @@
 ## C / C++
 
 ### [Compiler](./c_cpp/compiler.md)
+
+## [Rust](./rust/index.md)
