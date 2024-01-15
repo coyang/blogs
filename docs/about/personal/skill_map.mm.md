@@ -135,11 +135,11 @@
 - Runtime
   - CRI (Container Runtime Interface)
   - Runtime shims
-    - Cri-containerd （containerd）
-    - Dockershim （Docker）
-    - Cri-o （runC）
-    - Rktlet （rkt）
-    - Frakti （KataContainers）
+    - Cri-containerd (containerd)
+    - Dockershim (Docker)
+    - Cri-o (runC)
+    - Rktlet (rkt)
+    - Frakti (KataContainers)
   - RuntimeClass
 - Networking
   - CNI (Container Network Interface)
