@@ -262,3 +262,11 @@
   - Video
   - Subtitle
   - EPG
+
+## Front End
+
+### Web development
+
+- HTML
+- CSS
+- JavaScript
