@@ -9,3 +9,5 @@
 ### [Compiler](./c_cpp/compiler.md)
 
 ## [Rust](./rust/index.md)
+
+## [Practices](./practices/index.md)
