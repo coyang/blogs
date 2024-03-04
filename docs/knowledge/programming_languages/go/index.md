@@ -4,3 +4,4 @@
 - [Tips](./tips/index.md)
 - [Golang memory](./golang_memory.md)
 - [GC](./gc.md)
+- [Tools](./tools.md)

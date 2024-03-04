@@ -1,0 +1,26 @@
+# Awesome tools
+
+- [colorgo](https://github.com/songgao/colorgo) Wrapper around go command for colorized go build output.
+- [decouple](https://github.com/bobg/decouple) Find “overspecified” function parameters that could be generalized with interface types.
+- [depth](https://github.com/KyleBanks/depth) Visualize dependency trees of any package by analyzing imports.
+- [docs](https://github.com/go-oas/docs) Automatically generate RESTful API documentation for GO projects aligned with Open API Specification standard.
+- [go-callvis](https://github.com/ondrajz/go-callvis) Visualize call graph of your Go program using dot format.
+- [go-swagger](https://github.com/go-swagger/go-swagger) Swagger 2.0 implementation for go. Swagger is a simple yet powerful representation of your RESTful API.
+- [godbg](https://github.com/tylerwince/godbg) Implementation of Rusts dbg! macro for quick and easy debugging during development.
+- [gomodrun](https://github.com/dustinblackman/gomodrun) Go tool that executes and caches binaries included in go.mod files.
+- [gotestdox](https://github.com/bitfield/gotestdox) Show Go test results as readable sentences.
+- [igo](https://github.com/rocketlaunchr/igo) An igo to go transpiler (new language features for Go language!)
+- [modver](https://github.com/bobg/modver) Compare two versions of a Go module to check the version-number change required (major, minor, or patchlevel), according to semver rules.
+- [OctoLinker](https://github.com/OctoLinker/OctoLinker) Navigate through go files efficiently with the OctoLinker browser extension for GitHub.
+- [richgo](https://github.com/kyoh86/richgo) Enrich go test outputs with text decorations.
+- [roumon](https://github.com/becheran/roumon) Monitor current state of all active goroutines via a command line interface.
+- [rts](https://github.com/galeone/rts) RTS: response to struct. Generates Go structs from server responses.
+- [textra](https://github.com/ravsii/textra) Extract Go struct field names, types and tags for filtering and exporting.
+- [typex](https://github.com/dtgorski/typex) Examine Go types and their transitive dependencies, alternatively export results as TypeScript value objects (or types) declaration.
+- [oapi-codegen](https://github.com/deepmap/oapi-codegen) OpenAPI Client and Server Code Generator.
+- [go-complexity-analysis](https://github.com/fikin/go-complexity-analysis) calculates golang functions:
+  - the Cyclomatic complexities
+  - the Halstead complexities (difficulty, volume, time to code)
+  - the Maintainability index
+  - lines of code
+  - lines of code of (only) variable and constant declarations
