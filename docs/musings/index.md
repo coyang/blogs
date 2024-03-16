@@ -16,5 +16,6 @@
 - [Vault Change License](./vault_change_license.md)
 - [In the midst of chaos, there is also opportunity](./new_beginning.md)
 - [2023 New Term](./new_term_2023.md)
+- [New PC](./newpc.md)
 
 # [Reading Notes](./reading_notes/index.md)
