@@ -11,3 +11,5 @@
 ## [Rust](./rust/index.md)
 
 ## [Practices](./practices/index.md)
+
+## [Python](./python/index.md)
