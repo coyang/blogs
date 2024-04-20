@@ -70,7 +70,15 @@ theme:
 nav:
   - Home: index.md
   - AIGC: aigc/index.md
-  - Knowledge: knowledge/index.md
+  - Knowledge:
+    - Home: knowledge/index.md
+    - Tools: knowledge/tools/index.md
+    - Clean Code: knowledge/clean_code/index.md
+    - OS: knowledge/os/index.md
+    - Cloud Computing: knowledge/cloud_computing/index.md
+    - Security: knowledge/Security/index.md
+    - MessageQueue: knowledge/message_queue/index.md
+    - DevOps: knowledge/devops/index.md
   - English Learning: english_learning/index.md
   - Musings of the individual: musings/index.md
   - About: about/index.md
