@@ -1,5 +1,60 @@
 # COYANG's Skill Map
 
+## AI
+
+### Common knowledge
+
+- LLM
+- Inference
+- Training
+- Fine-tuning
+- Agent
+- RAG
+  - Chunking
+  - Embedding
+  - Vectorization
+  - Retrieval
+  - Generation
+  - Ranking
+  - Graph RAG
+- Prompt Engineering
+
+### Frameworks
+
+- PyTorch
+- TensorFlow
+- Transformers
+
+### \*Machine Learning\*\*
+
+- **Fundamentals**
+  - Supervised Learning (regression, classification)
+  - Unsupervised Learning (clustering, dimensionality reduction)
+  - Reinforcement Learning
+- **Advanced Techniques**
+  - Deep Learning (neural networks, CNNs, RNNs)
+  - Natural Language Processing (NLP)
+  - Computer Vision
+
+### **Data Skills**
+
+- **Data Handling**
+  - Data Preprocessing
+  - Feature Engineering
+  - Data Visualization
+
+### Model development
+
+- Ollama
+- vLLM
+- Hugging Face
+
+### Deployment Frameworks
+
+- Langchain
+- CrewAI
+- LlamaIndex
+- Coze / Dify
 
 ## Agile
 
@@ -24,6 +79,7 @@
 - Golang
 - Python
 - Shell
+- TypeScript
 
 ## Basic knowledge
 
@@ -68,6 +124,7 @@
 ### Storage
 
 - Network Storage
+
   - Glusterfs
   - AWS EBS
   - NFS v4
@@ -75,16 +132,19 @@
   - Apache CloudStack
 
 - Object Storage
+
   - AWS S3
   - OpenStack Swift
   - Ceph
 
 - Block Storage
+
   - SAN
   - AWS EBS
   - RAID
 
 - File System
+
   - ext4
   - XFS
   - NFS
@@ -94,11 +154,12 @@
   - ldapfs
 
 - IO schedule
+
   - deadline
   - noop
   - cfq
 
-- The Linux  I/O Stack Diagram
+- The Linux I/O Stack Diagram
 
 ### DB
 
@@ -106,6 +167,8 @@
 - Vault
 - Redis
 - MySQL
+- Vector DB
+- Graph DB
 
 ## Infrastructure
 
@@ -154,7 +217,7 @@
     - Weave
     - Cilium
 - Storage
-  - CSI  (Container Storage Interface)
+  - CSI (Container Storage Interface)
   - Persistent Volume & Persistent Volume Claim
   - Volume plugins
     - NFS
@@ -211,6 +274,7 @@
 ### Quality
 
 - Code format
+
   - clang-format
   - gofmt
   - shfmt
@@ -224,6 +288,7 @@
   - pylint
   - golangci-lint
   - rpm lint
+  - SonarQube
 
 ## Troubleshooting and Issue Resolution
 
@@ -237,6 +302,7 @@
 - Restructext
 - AsciiDoc
 - PlantUML
+- Mermaid
 
 ## HW
 
