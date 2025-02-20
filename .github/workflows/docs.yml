@@ -27,6 +27,16 @@ jobs:
             ${{ runner.os }}-pip-
             ${{ runner.os }}-
 
+      - name: Install PlantUML
+        run: |
+          sudo apt update
+          sudo apt install -y openjdk-11-jre
+          sudo apt install -y graphviz
+          wget https://github.com/plantuml/plantuml/releases/latest/download/plantuml.jar -O /usr/local/bin/plantuml.jar
+          echo 'java -jar /usr/local/bin/plantuml.jar "$@"' | sudo tee /usr/local/bin/plantuml
+          sudo chmod +x /usr/local/bin/plantuml
+          plantuml -version
+
       - name: Install dependencies 🔧
         run: make install
 
