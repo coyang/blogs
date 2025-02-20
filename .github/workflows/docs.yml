@@ -33,7 +33,8 @@ jobs:
           sudo apt install -y openjdk-11-jre
           sudo apt install -y graphviz
           wget https://github.com/plantuml/plantuml/releases/latest/download/plantuml.jar -O /usr/local/bin/plantuml.jar
-          echo 'java -jar /usr/local/bin/plantuml.jar "$@"' | sudo tee /usr/local/bin/plantuml
+          echo '#!/bin/bash' | sudo tee /usr/local/bin/plantuml
+          echo 'java -jar /usr/local/bin/plantuml.jar "$@"' | sudo tee -a /usr/local/bin/plantuml
           sudo chmod +x /usr/local/bin/plantuml
           plantuml -version
 
