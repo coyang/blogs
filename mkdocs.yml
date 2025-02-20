@@ -69,7 +69,6 @@ theme:
 
 nav:
   - Home: index.md
-  - AIGC: aigc/index.md
   - Knowledge:
     - Home: knowledge/index.md
     - Tools: knowledge/tools/index.md
@@ -79,6 +78,5 @@ nav:
     - Security: knowledge/security/index.md
     - MessageQueue: knowledge/message_queue/index.md
     - DevOps: knowledge/devops/index.md
-  - English Learning: english_learning/index.md
-  - Musings of the individual: musings/index.md
+  - Musings: musings/index.md
   - About: about/index.md

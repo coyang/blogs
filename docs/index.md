@@ -15,5 +15,3 @@ Always be acquiring new skills and having new experiences.
 > \-- 毕淑敏
 
 ---
-
-[QR code](./qr.md)
