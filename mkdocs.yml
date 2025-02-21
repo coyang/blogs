@@ -69,7 +69,8 @@ theme:
 
 nav:
   - Home: index.md
-  - AI: ai/index.md
+  - AI:
+    - RAG: ai/rag/rag.md
   - Knowledge:
     - Home: knowledge/index.md
     - Tools: knowledge/tools/index.md
