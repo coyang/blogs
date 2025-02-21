@@ -72,6 +72,7 @@ nav:
     - AI:
           - RAG: ai/rag/rag.md
           - Building an AI Application from Scratch: ai/building_an_ai_application_from_scratch.md
+          - AI DevOps: ai/ai_devops.md
     - Knowledge:
           - Home: knowledge/index.md
           - Tools: knowledge/tools/index.md
