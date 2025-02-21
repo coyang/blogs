@@ -6,7 +6,7 @@
 
 ## Iceberg Model
 
-![bg fit](../../images/ai/knowledge/iceberg.jpg)
+![bg fit](../images/ai/knowledge/iceberg.jpg)
 
 ## 1. AI Code Review Robot
 
@@ -26,7 +26,7 @@
 
 ## 4. Selecting Technology
 
-![bg fit](../../images/ai/knowledge/ai_circular_wordcloud.png)
+![bg fit](../images/ai/knowledge/ai_circular_wordcloud.png)
 
 ### **Model Development**
 

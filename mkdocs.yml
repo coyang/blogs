@@ -7,33 +7,33 @@ site_author: coyang
 docs_dir: docs
 
 plugins:
-  - search
-  - mermaid2
-  - mkdocs-video
-  - markmap:
-      base_path: docs
-      encoding: utf-8
-      file_extension: .mm.md
-      d3_version: 6.7.0
-      lib_version: 0.14.1
-      view_version: 0.14.0
-  - build_plantuml:
-      render: 'local' # or "local" for local rendering
-      bin_path: '/usr/local/bin/plantuml' # ignored when render: server
-      server: 'http://www.plantuml.com/plantuml' # official plantuml server
-      disable_ssl_certificate_validation: true # for self-signed and invalid certs
-      output_format: 'svg' # or "png"
-      diagram_root: 'docs' # should reside under docs_dir
-      output_folder: 'out'
-      input_folder: 'images'
-      input_extensions: 'puml' # comma separated list of extensions to parse, by default every file is parsed
+    - search
+    - mermaid2
+    - mkdocs-video
+    - markmap:
+          base_path: docs
+          encoding: utf-8
+          file_extension: .mm.md
+          d3_version: 6.7.0
+          lib_version: 0.14.1
+          view_version: 0.14.0
+    - build_plantuml:
+          render: "local" # or "local" for local rendering
+          bin_path: "/usr/local/bin/plantuml" # ignored when render: server
+          server: "http://www.plantuml.com/plantuml" # official plantuml server
+          disable_ssl_certificate_validation: true # for self-signed and invalid certs
+          output_format: "svg" # or "png"
+          diagram_root: "docs" # should reside under docs_dir
+          output_folder: "out"
+          input_folder: "images"
+          input_extensions: "puml" # comma separated list of extensions to parse, by default every file is parsed
 
 markdown_extensions:
-  - attr_list
-  - smarty
-  - toc:
-      permalink: True
-  - sane_lists
+    - attr_list
+    - smarty
+    - toc:
+          permalink: True
+    - sane_lists
 
 extra_javascript:
     - https://unpkg.com/mermaid/dist/mermaid.min.js
@@ -53,10 +53,10 @@ theme:
         - content.code.annotate
         - content.code.copy
     shortcuts:
-        help: 191    # ?
-        next: 78     # n
+        help: 191 # ?
+        next: 78 # n
         previous: 80 # p
-        search: 83   # s
+        search: 83 # s
     highlightjs: true
     hljs_languages:
         - yaml
@@ -68,17 +68,18 @@ theme:
         - java
 
 nav:
-  - Home: index.md
-  - AI:
-    - RAG: ai/rag/rag.md
-  - Knowledge:
-    - Home: knowledge/index.md
-    - Tools: knowledge/tools/index.md
-    - Clean Code: knowledge/clean_code/index.md
-    - OS: knowledge/os/index.md
-    - Cloud Computing: knowledge/cloud_computing/index.md
-    - Security: knowledge/security/index.md
-    - MessageQueue: knowledge/message_queue/index.md
-    - DevOps: knowledge/devops/index.md
-  - Musings: musings/index.md
-  - About: about/index.md
+    - Home: index.md
+    - AI:
+          - RAG: ai/rag/rag.md
+          - Building an AI Application from Scratch: ai/building_an_ai_application_from_scratch.md
+    - Knowledge:
+          - Home: knowledge/index.md
+          - Tools: knowledge/tools/index.md
+          - Clean Code: knowledge/clean_code/index.md
+          - OS: knowledge/os/index.md
+          - Cloud Computing: knowledge/cloud_computing/index.md
+          - Security: knowledge/security/index.md
+          - MessageQueue: knowledge/message_queue/index.md
+          - DevOps: knowledge/devops/index.md
+    - Musings: musings/index.md
+    - About: about/index.md
