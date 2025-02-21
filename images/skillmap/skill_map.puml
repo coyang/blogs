@@ -1,0 +1,261 @@
+@startmindmap
+* COYANG's Skill Map
+**[#LightGreen] AI
+***[#LightBlue] Common knowledge
+**** LLM
+**** Inference
+**** Training
+**** Fine-tuning
+**** Agent
+**** RAG
+***** Chunking
+***** Embedding
+***** Vectorization
+***** Retrieval
+***** Generation
+***** Ranking
+***** Graph RAG
+**** Prompt Engineering
+***[#LightYellow] Frameworks
+**** PyTorch
+**** TensorFlow
+**** Transformers
+***[#LightCyan] Machine Learning
+**** Fundamentals
+***** Supervised Learning (regression, classification)
+***** Unsupervised Learning (clustering, dimensionality reduction)
+***** Reinforcement Learning
+**** Advanced Techniques
+***** Deep Learning (neural networks, CNNs, RNNs)
+***** Natural Language Processing (NLP)
+***** Computer Vision
+***[#LightPink] Data Skills
+**** Data Handling
+***** Data Preprocessing
+***** Feature Engineering
+***** Data Visualization
+***[#LightSalmon] Model development
+**** Ollama
+**** vLLM
+**** Hugging Face
+***[#LightSkyBlue] Deployment Frameworks
+**** Langchain
+**** CrewAI
+**** LlamaIndex
+**** Coze / Dify
+**[#LightGreen] Agile
+***[#LightBlue] Extreme Programming
+***[#LightYellow] Scrum
+***[#LightCyan] DevOps
+**** Version Control
+***** Git
+**** CI / CD
+**** Tools
+***** Jenkins
+***** Gitlab CI
+***** Github action
+***[#LightPink] Lean
+***[#LightSalmon] Kanban
+**[#LightSkyBlue] Development
+*** Programming Languages
+**** C / C++
+**** Golang
+**** Python
+**** Shell
+**** TypeScript
+**[#LightGreen] Basic knowledge
+***[#LightBlue] Operating System
+**** Linux
+***[#LightYellow] Data structure and Algorithm
+**** Data structure
+**** Algorithm
+***[#LightCyan] RegExp
+***[#LightPink] Makefile
+**** Automake
+**** Spec-packaging
+***[#LightSalmon] Container
+**** Docker
+**** LXC
+**** RunC
+**** Podman
+**** Container basic
+***** Linux Process Management
+***** Cgroups
+***** Linux Namespaces
+***** Rootfs & Container Image
+***** Image Registry
+***[#LightSkyBlue] Network
+**** TCP/IP
+**** VLANs
+**** DNS/CDN
+**** HTTP/HTTPS
+***[#LightGreen] Storage
+**** Network Storage
+***** Glusterfs
+***** AWS EBS
+***** NFS v4
+***** Ceph
+***** Apache CloudStack
+**** Object Storage
+***** AWS S3
+***** OpenStack Swift
+***** Ceph
+**** Block Storage
+***** SAN
+***** AWS EBS
+***** RAID
+**** File System
+***** ext4
+***** XFS
+***** NFS
+***** Glusterfs
+***** Cephfs
+***** cdafs
+***** ldapfs
+**** IO schedule
+***** deadline
+***** noop
+***** cfq
+**** The Linux I/O Stack Diagram
+***[#LightBlue] DB
+**** LDAP
+**** Vault
+**** Redis
+**** MySQL
+**** Vector DB
+**** Graph DB
+
+left side
+
+**[#LightYellow] Infrastructure
+***[#LightCyan] OpenStack
+**** Nova
+**** Neutron
+**** Cinder
+**** Glance
+**** Swift
+**** Keystone
+***[#LightPink] Kubernetes
+**** Helm
+***** Helm chart development
+***** Chart UT
+***** kube-linter
+**** Kubernetes architecture
+***** Node
+***** Kubelet
+****** Runtime
+******* CRI (Container Runtime Interface)
+******* Runtime shims
+******** Cri-containerd (containerd)
+******** Dockershim (Docker)
+******** Cri-o (runC)
+******** Rktlet (rkt)
+******** Frakti (KataContainers)
+******* RuntimeClass
+***** Networking
+****** CNI (Container Network Interface)
+****** Linux Network Namespace
+****** Network plugins
+******* Flannel
+******* Calico
+******* OVS
+******* SR-IOV
+******* macvlan/ipvlan
+******* Opencontrail
+******* Weave
+******* Cilium
+***** Storage
+****** CSI (Container Storage Interface)
+****** Persistent Volume & Persistent Volume Claim
+****** Volume plugins
+******* NFS
+******* Cinder
+******* GlusterFS
+******* Ceph
+******* Local path
+****** Volume extension
+******* Rook.io
+***** Kube-proxy
+****** Iptables
+****** IPVS
+**** Kubernetes workloads
+***** Pod
+***** ReplicaSet
+***** Deployment
+****** Rolling update
+****** Pause/resume
+****** Canary deploy
+****** Rollback
+***** DaemonSet
+***** StatefulSet
+****** Topology State
+****** Storage State
+***** Job
+***** CronJob
+**** Kubernetes applications management
+***** Service
+****** Publish service
+****** Nginx/HAproxy service
+****** External Load Balancer
+***** ConfigMap
+***** Ingress
+***** Secret
+***** Headless Service
+***** External Load Balancer
+**[#LightSalmon] Testing
+*** Unit testing
+**** TDD
+*** Integration testing
+*** Contract Testing
+*** Robot
+**** Robot Framework
+**** Robotidy
+**[#LightSkyBlue] Clean code
+*** Quality
+**** Code format
+***** clang-format
+***** gofmt
+***** shfmt
+***** autopep8
+**** Static analysis
+***** coverity
+***** clang-tidy
+***** scan build
+***** pylint
+***** golangci-lint
+***** rpm lint
+***** SonarQube
+**[#LightGreen] Troubleshooting and Issue Resolution
+*** Log analysis
+*** Error tracking
+*** Performance problem tuning
+**[#LightBlue] Documentation
+*** Markdown
+*** Restructext
+*** AsciiDoc
+*** PlantUML
+*** Mermaid
+**[#LightYellow] HW
+*** HW Basic
+**** CPU
+**** Memory
+**** Hard Disk
+**[#LightCyan] DTV
+*** HW
+**** Chip
+*** SW
+**** Standard
+***** DVB-C
+***** DVB-B
+***** ISDT-B
+**** Feature
+***** Audio
+***** Video
+***** Subtitle
+***** EPG
+**[#LightPink] Front End
+*** Web development
+**** HTML
+**** CSS
+**** JavaScript
+@endmindmap
