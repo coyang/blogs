@@ -19,7 +19,7 @@ serve:
 	mkdocs serve --strict
 
 build:
-	mkdocs build --strict  --verbose
+	mkdocs build --strict
 
 deploy:
 	mkdocs gh-deploy --strict --force
