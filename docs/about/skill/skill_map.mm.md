@@ -25,7 +25,7 @@
 - TensorFlow
 - Transformers
 
-### \*Machine Learning\*\*
+### Machine Learning
 
 - **Fundamentals**
   - Supervised Learning (regression, classification)

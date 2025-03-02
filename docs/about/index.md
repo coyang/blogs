@@ -12,6 +12,14 @@
 6. 解决问题的能力
 7. 学习能力和持续改进
 
+## 工作经历
+
+![creer paht](../images/skillmap/career_path.svg)
+
+
+## Domain Knowledge
+
+![Domain Knowledge](../images/skillmap/domain_knowledge.svg)
 ## [Skillmap](./skill/skill_map.mm.md)
 
 ![](../images/skillmap/skill_map.mmd.svg)
