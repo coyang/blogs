@@ -12,5 +12,6 @@
 - [Vault Change License](./vault_change_license.md)
 - [In the midst of chaos, there is also opportunity](./new_beginning.md)
 - [Matrix 世家](./matrix_history.md)
+- [活文档](./living_documentation.md)
 
 # [Reading Notes](./reading_notes/index.md)
