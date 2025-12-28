@@ -82,5 +82,6 @@ nav:
           - Security: knowledge/security/index.md
           - MessageQueue: knowledge/message_queue/index.md
           - DevOps: knowledge/devops/index.md
+          - Law: knowledge/law/index.md
     - Musings: musings/index.md
     - About: about/index.md
