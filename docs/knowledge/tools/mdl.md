@@ -9,7 +9,7 @@ files.
 
 ## What is `mdl`?
 
-[`mdl`]((https://github.com/markdownlint/markdownlint)) is a command-line tool
+[`mdl`](https://github.com/markdownlint/markdownlint) is a command-line tool
 that analyzes Markdown documents and checks them against a set of predefined
 rules. It helps identify and highlight issues such as formatting
 inconsistencies, broken links, and other potential problems. By using `mdl`, we
