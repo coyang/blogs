@@ -32,3 +32,5 @@
 ## [Git](./git/index.md)
 
 ## [ZoomIt](./zoomit.md)
+
+## [OpenGrok](./opengrok/opengrok_deep_analysis.md)
