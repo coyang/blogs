@@ -4,8 +4,8 @@
 
 https://google.github.io/styleguide/go/decisions
 
-[Overview](index) | [Guide](guide) | [Decisions](decisions) |
-[Best practices](best-practices)
+[Overview](index.md) | [Guide](guide.md) | [Decisions](decisions.md) |
+[Best practices](best-practices.md)
 
 <!--
 
@@ -13,10 +13,10 @@ https://google.github.io/styleguide/go/decisions
 
 {% raw %}
 
-**Note:** This is part of a series of documents that outline [Go Style](index)
-at Google. This document is **[normative](index#normative) but not
-[canonical](index#canonical)**, and is subordinate to the
-[core style guide](guide). See [the overview](index#about) for more information.
+**Note:** This is part of a series of documents that outline [Go Style](index.md)
+at Google. This document is **[normative](index.md#normative) but not
+[canonical](index.md#canonical)**, and is subordinate to the
+[core style guide](guide.md). See [the overview](index.md#about) for more information.
 
 <a id="about"></a>
 
@@ -27,7 +27,7 @@ guidance, explanations, and examples for the advice given by the Go readability
 mentors.
 
 This document is **not exhaustive** and will grow over time. In cases where
-[the core style guide](guide) contradicts the advice given here, **the style
+[the core style guide](guide.md) contradicts the advice given here, **the style
 guide takes precedence**, and this document should be updated accordingly.
 
 See [the Overview](https://google.github.io/styleguide/go#about) for the full
@@ -36,20 +36,20 @@ set of Go Style documents.
 The following sections have moved from style decisions to another part of the
 guide:
 
-*   **MixedCaps**: see [guide#mixed-caps](guide#mixed-caps)
+*   **MixedCaps**: see [guide.md#mixed-caps](guide.md#mixed-caps)
     <a id="mixed-caps"></a>
 
-*   **Formatting**: see [guide#formatting](guide#formatting)
+*   **Formatting**: see [guide.md#formatting](guide.md#formatting)
     <a id="formatting"></a>
 
-*   **Line Length**: see [guide#line-length](guide#line-length)
+*   **Line Length**: see [guide.md#line-length](guide.md#line-length)
     <a id="line-length"></a>
 
 <a id="naming"></a>
 
 ## Naming
 
-See the naming section within [the core style guide](guide#naming) for
+See the naming section within [the core style guide](guide.md#naming) for
 overarching guidance on naming. The following sections provide further
 clarification on specific areas within naming.
 
@@ -100,11 +100,11 @@ code may contain underscores. Specific examples include:
     [package-level documentation examples](https://go.dev/blog/examples)
 
 [`tabwriter`]: https://pkg.go.dev/text/tabwriter
-[shadowed]: best-practices#shadowing
+[shadowed]: best-practices.md#shadowing
 
 Avoid uninformative package names like `util`, `utility`, `common`, `helper`,
 and so on. See more about
-[so-called "utility packages"](best-practices#util-packages).
+[so-called "utility packages"](best-practices.md#util-packages).
 
 When an imported package is renamed (e.g. `import foopb
 "path/to/foo_go_proto"`), the local name for the package must comply with the
@@ -159,7 +159,7 @@ const (
 )
 ```
 
-[MixedCaps]: guide#mixed-caps
+[MixedCaps]: guide.md#mixed-caps
 [Exported]: https://tour.golang.org/basics/3
 
 Do not use non-MixedCaps constant names or constants with a `K` prefix.
@@ -264,8 +264,8 @@ judgement based on context, [clarity], and [concision].
 *   A very large scope is anything that spans more than a page (say, more than
     25 lines).
 
-[clarity]: guide#clarity
-[concision]: guide#concision
+[clarity]: guide.md#clarity
+[concision]: guide.md#concision
 
 A name that might be perfectly clear (e.g., `c` for a counter) within a small
 scope could be insufficient in a larger scope and would require clarification to
@@ -501,8 +501,8 @@ way you expect them to be.
 should usually be indented to avoid linewrapping. Apart from indentation,
 decoration should generally be avoided.
 
-[doc preview]: best-practices#documentation-preview
-[documentation conventions]:  best-practices#documentation-conventions
+[doc preview]: best-practices.md#documentation-preview
+[documentation conventions]:  best-practices.md#documentation-conventions
 
 <a id="comment-line-length"></a>
 
@@ -519,7 +519,7 @@ individual lines closer to the 60-70 character mark.
 
 There is plenty of existing code in which comments exceed 80 characters in
 length. This guidance should not be used as a justification to change such code
-as part of a readability review (see [consistency](guide#consistency)), though
+as part of a readability review (see [consistency](guide.md#consistency)), though
 teams are encouraged to opportunistically update comments to follow this
 guideline as a part of other refactors. The primary goal of this guideline is to
 ensure that all Go readability mentors make the same recommendation when and if
@@ -723,7 +723,7 @@ minor implementation brevity.
 [Naked returns] are acceptable only in a small function. Once it's a
 medium-sized function, be explicit with your returned values. Similarly, do not
 name result parameters just because it enables you to use naked returns.
-[Clarity](guide#clarity) is always more important than saving a few lines in
+[Clarity](guide.md#clarity) is always more important than saving a few lines in
 your function.
 
 It is always acceptable to name a result parameter if its value must be changed
@@ -836,7 +836,7 @@ Generated protocol buffer packages must be renamed to remove underscores from
 their names, and their aliases must have a `pb` suffix. See
 [proto and stub best practices] for more information.
 
-[proto and stub best practices]: best-practices#import-protos
+[proto and stub best practices]: best-practices.md#import-protos
 
 ```go
 // Good:
@@ -927,7 +927,7 @@ the mandatory separation between standard library and Google imports - is not
 supported by the [goimports] tool. Additional import subgroups require attention
 on the part of both authors and reviewers to maintain in a conforming state.
 
-[goimports]: golang.org/x/tools/cmd/goimports
+[goimports]: https://golang.org/x/tools/cmd/goimports
 
 Google programs that are also AppEngine apps should have a separate group for
 AppEngine imports.
@@ -1718,7 +1718,7 @@ func (r *SomeType) SomeLongFunctionName(foo1, foo2, foo3 string,
 }
 ```
 
-See [best practices](best-practices#funcargs) for a few options for shortening
+See [best practices](best-practices.md#funcargs) for a few options for shortening
 the call sites of functions that would otherwise have many arguments.
 
 ```go
@@ -1771,7 +1771,7 @@ bad := foo.Call(long, list, of, parameters,
 ```
 
 Do not add comments to specific function parameters. Instead, use an
-[option struct](best-practices#option-structure) or add more detail to the
+[option struct](best-practices.md#option-structure) or add more detail to the
 function documentation.
 
 ```go
@@ -2160,15 +2160,15 @@ it's difficult to ensure an error would be caught or in a context where an error
 should be [checked](#handle-errors) (e.g., in many request handlers). For
 constant inputs, this allows tests to easily ensure that the `Must` arguments
 are well-formed, and for non-constant inputs it permits tests to validate that
-errors are [properly handled or propagated](best-practices#error-handling).
+errors are [properly handled or propagated](best-practices.md#error-handling).
 
 Where `Must` functions are used in a test, they should generally be
 [marked as a test helper](#mark-test-helpers) and call `t.Fatal` on error (see
-[error handling in test helpers](best-practices#test-helper-error-handling) for
+[error handling in test helpers](best-practices.md#test-helper-error-handling) for
 more considerations of using that).
 
 They should not be used when
-[ordinary error handling](best-practices#error-handling) is possible (including
+[ordinary error handling](best-practices.md#error-handling) is possible (including
 with some refactoring):
 
 ```go
@@ -2315,7 +2315,7 @@ Do not export interfaces that the users of the package do not need.
 [GoTip #42: Authoring a Stub for Testing]: https://google.github.io/styleguide/go/index.html#gotip
 [GoTip #49: Accept Interfaces, Return Concrete Types]: https://google.github.io/styleguide/go/index.html#gotip
 [GoTip #78: Minimal Viable Interfaces]: https://google.github.io/styleguide/go/index.html#gotip
-[real implementation]: best-practices#use-real-transports
+[real implementation]: best-practices.md#use-real-transports
 [public API]: https://abseil.io/resources/swe-book/html/ch12.html#test_via_public_apis
 [double types]: https://abseil.io/resources/swe-book/html/ch13.html#techniques_for_using_test_doubles
 [test double]: https://abseil.io/resources/swe-book/html/ch13.html#basic_concepts
@@ -2370,7 +2370,7 @@ Generics (formally called "[Type Parameters]") are allowed where they fulfill
 your business requirements. In many applications, a conventional approach using
 existing language features (slices, maps, interfaces, and so on) works just as
 well without the added complexity, so be wary of premature use. See the
-discussion on [least mechanism](guide#least-mechanism).
+discussion on [least mechanism](guide.md#least-mechanism).
 
 When introducing an exported API that uses generics, make sure it is suitably
 documented. It's highly encouraged to include motivating runnable [examples].
@@ -2756,8 +2756,8 @@ See also:
 *   [Go Tip #80: Dependency Injection Principles](https://google.github.io/styleguide/go/index.html#gotip)
 
 [standard `flag` package]: https://golang.org/pkg/flag/
-[mixed caps]: guide#mixed-caps
-[complex CLIs]: best-practices#complex-clis
+[mixed caps]: guide.md#mixed-caps
+[complex CLIs]: best-practices.md#complex-clis
 [totw-45]: https://abseil.io/tips/45
 
 <a id="logging"></a>
@@ -2780,10 +2780,10 @@ formatting to do.
 
 See also:
 
-*   Best practices on [logging errors](best-practices#error-logging) and
-    [custom verbosily levels](best-practices#vlog)
+*   Best practices on [logging errors](best-practices.md#error-logging) and
+    [custom verbosily levels](best-practices.md#vlog)
 *   When and how to use the log package to
-    [stop the program](best-practices#checks-and-panics)
+    [stop the program](best-practices.md#checks-and-panics)
 
 [standard `log` package]: https://pkg.go.dev/log
 [package `glog`]: https://pkg.go.dev/github.com/golang/glog
@@ -2958,7 +2958,7 @@ Do not create "assertion libraries" as helpers for testing.
 Assertion libraries are libraries that attempt to combine the validation and
 production of failure messages within a test (though the same pitfalls can apply
 to other test helpers as well). For more on the distinction between test helpers
-and assertion libraries, see [best practices](best-practices#test-functions).
+and assertion libraries, see [best practices](best-practices.md#test-functions).
 
 ```go
 // Bad:
@@ -3042,7 +3042,7 @@ See also:
 *   [Equality comparison and diffs](#types-of-equality)
 *   [Print diffs](#print-diffs)
 *   For more on the distinction between test helpers and assertion helpers, see
-    [best practices](best-practices#test-functions)
+    [best practices](best-practices.md#test-functions)
 
 [useful failure messages]: #useful-test-failures
 [`fmt`]: https://golang.org/pkg/fmt/
@@ -3168,7 +3168,7 @@ For table-driven test, consider using subtests and use `t.Fatal` rather than
 [GoTip #25: Subtests: Making Your Tests Lean](https://google.github.io/styleguide/go/index.html#gotip).
 
 **Best practice:** For more discussion about when `t.Fatal` should be used, see
-[best practices](best-practices#t-fatal).
+[best practices](best-practices.md#t-fatal).
 
 <a id="types-of-equality"></a>
 
@@ -3353,7 +3353,7 @@ component intended for semantic control flow. Tests should seek to only test
 semantic information that can be reliably observed, rather than display
 information that is intended for human debugging, as this is often subject to
 future changes. For guidance on constructing errors with semantic meaning see
-[best-practices regarding errors](best-practices#error-handling). If an error
+[best-practices regarding errors](best-practices.md#error-handling). If an error
 with insufficient semantic information is coming from a dependency outside your
 control, consider filing a bug against the owner to help improve the API, rather
 than relying on parsing the error message.
@@ -3365,7 +3365,7 @@ some other error, then consider using `cmp` with [`cmpopts.EquateErrors`].
 
 > **Note:** If a test uses [`cmpopts.EquateErrors`] but all of its `wantErr`
 > values are either `nil` or `cmpopts.AnyError`, then using `cmp` is
-> [unnecessary mechanism](guide#least-mechanism). Simplify the code by making
+> [unnecessary mechanism](guide.md#least-mechanism). Simplify the code by making
 > the want field a `bool`. You can then use a simple comparison with `!=`.
 >
 > ```go
@@ -3728,7 +3728,7 @@ and the conditions that led to it. Specifically, the guidance about
 to implement such libraries.
 
 **Tip:** For more on the distinction between test helpers and assertion helpers,
-see [best practices](best-practices#test-functions).
+see [best practices](best-practices.md#test-functions).
 
 Although the above refers to `*testing.T`, much of the advice stays the same for
 benchmark and fuzz helpers.

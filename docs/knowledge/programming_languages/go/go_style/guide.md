@@ -4,8 +4,8 @@
 
 https://google.github.io/styleguide/go/guide
 
-[Overview](index) | [Guide](guide) | [Decisions](decisions) |
-[Best practices](best-practices)
+[Overview](index.md) | [Guide](guide.md) | [Decisions](decisions.md) |
+[Best practices](best-practices.md)
 
 <!--
 
@@ -13,9 +13,9 @@ https://google.github.io/styleguide/go/guide
 
 {% raw %}
 
-**Note:** This is part of a series of documents that outline [Go Style](index)
-at Google. This document is **[normative](index#normative) and
-[canonical](index#canonical)**. See [the overview](index#about) for more
+**Note:** This is part of a series of documents that outline [Go Style](index.md)
+at Google. This document is **[normative](index.md#normative) and
+[canonical](index.md#canonical)**. See [the overview](index.md#about) for more
 information.
 
 <a id="principles"></a>
@@ -119,7 +119,7 @@ them:
     [runnable examples in the same package](https://cs.opensource.google/go/go/+/refs/tags/go1.19.2:src/sort/example_search_test.go),
     which benefit both users (they
     [show up in godoc](https://pkg.go.dev/sort#pkg-examples)) and maintainers
-    (they [run as part of tests](decisions#examples)).
+    (they [run as part of tests](decisions.md#examples)).
 *   [`strings.Cut`](https://pkg.go.dev/strings#Cut) is only four lines of code,
     but they improve the
     [clarity and correctness of callsites](https://github.com/golang/go/issues/46336).
@@ -259,7 +259,7 @@ if err := doSomething(); err == nil { // if NO error
 
 [Table-driven testing]: https://github.com/golang/go/wiki/TableDrivenTests
 [error handling]: https://go.dev/blog/errors-are-values
-["boosting"]: best-practices#signal-boost
+["boosting"]: best-practices.md#signal-boost
 
 <a id="maintainability"></a>
 
@@ -425,7 +425,7 @@ practical for it to be, the line should be allowed to remain long.
 
 Do not split a line:
 
-*   Before an [indentation change](decisions#indentation-confusion) (e.g.,
+*   Before an [indentation change](decisions.md#indentation-confusion) (e.g.,
     function declaration, conditional)
 *   To make a long string (e.g., a URL) fit into multiple shorter lines
 
@@ -436,11 +436,11 @@ Do not split a line:
 Naming is more art than science. In Go, names tend to be somewhat shorter than
 in many other languages, but the same [general guidelines] apply. Names should:
 
-*   Not feel [repetitive](decisions#repetition) when they are used
+*   Not feel [repetitive](decisions.md#repetition) when they are used
 *   Take the context into consideration
 *   Not repeat concepts that are already clear
 
-You can find more specific guidance on naming in [decisions](decisions#naming).
+You can find more specific guidance on naming in [decisions](decisions.md#naming).
 
 [general guidelines]: https://testing.googleblog.com/2017/10/code-health-identifiernamingpostforworl.html
 
