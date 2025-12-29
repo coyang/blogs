@@ -1,5 +1,7 @@
 # Coyang's personal blogs
 
+![](./about/coyang.png)
+
 Be a lifelong learner.
 
 Always be acquiring new skills and having new experiences.
