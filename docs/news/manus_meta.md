@@ -10,10 +10,14 @@
 则简短的公告背后，隐藏着几个极具冲击力的事实，揭示了 AI 发展的下一阶段以及 Meta
 的宏大野心。
 
+![](./images/Meta_Manus_AI_Agent_Fusion/page-01.png)
+
 本文将以清单体的形式，为您清晰剖析这次收购中最令人惊讶的四个关键要点，帮助您理解
 其背后的真正变革。
 
 ---
+
+![](./images/Meta_Manus_AI_Agent_Fusion/page-03.png)
 
 ## 1. 难以想象的规模：147 万亿 tokens 与 8000 万台虚拟电脑
 
@@ -27,6 +31,7 @@
 台价值已被验证，成为科技巨头争相收购的对象。
 
 ## 2. 不只是聊天机器人：一个真正的“通用自主代理”
+![](./images/Meta_Manus_AI_Agent_Fusion/page-04.png)
 
 当前市场上充斥着各类 AI 助手与聊天机器人，但 Manus 的定位远超于此。Meta 的公告明
 确指出，Manus 构建的是一个领先的“自主的通用代理”（`autonomous general-purpose
@@ -40,6 +45,8 @@ agent`）。
 这标志着 AI 能力从“执行指令”到“自主完成项目”的质的飞跃。用户可设定目标，由代理自
 主规划、执行并交付结果——这是 Meta 不惜重金收购的核心战略资产，也指明了未来生产力
 工具的演进方向。
+
+![](./images/Meta_Manus_AI_Agent_Fusion/page-03.png)
 
 ## 3. 双轨并行：Meta 的整合与独立运营策略
 
@@ -72,3 +79,5 @@ Meta 对 Manus 的收购远不止是一次技术整合，更是清晰的战略�
 
 当如此强大的自主 AI 工具即将触达数十亿人时，我们的工作与日常生活将迎来怎样的颠
 覆？这是值得我们每个人开始深思的问题。
+
+![](./images/Meta_Manus_AI_Agent_Fusion/page-11.png)
