@@ -1,0 +1,815 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="Coyang's Personal Blogs" name="description"/>
+<meta content="coyang" name="author"/>
+<link href="https://coyang.top/knowledge/programming_languages/go/go_style/guide/" rel="canonical"/>
+<link href="../../../../../images/logo/COYANG-logos_transparent.png" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.7.1" name="generator"/>
+<title>Guide - COYANG</title>
+<link href="../../../../../assets/stylesheets/main.484c7ddc.min.css" rel="stylesheet"/>
+<script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#go-style-guide">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="COYANG" class="md-header__button md-logo" data-md-component="logo" href="../../../../.." title="COYANG">
+<img alt="logo" src="../../../../../images/logo/COYANG-logos_white.png"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            COYANG
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Guide
+            
+          </span>
+</div>
+</div>
+</div>
+<script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</label>
+<nav aria-label="Search" class="md-search__options">
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" title="Clear" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+</button>
+</nav>
+<div class="md-search__suggest" data-md-component="search-suggest"></div>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<nav aria-label="Tabs" class="md-tabs" data-md-component="tabs">
+<div class="md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../../..">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../../../ai/rag/rag/">
+          
+  
+  
+  AI
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../../">
+          
+  
+  
+  Knowledge
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../../../musings/">
+        
+  
+  
+    
+  
+  Musings
+
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../../../news/">
+        
+  
+  
+    
+  
+  News
+
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../../../about/">
+        
+  
+  
+    
+  
+  About
+
+      </a>
+</li>
+</ul>
+</div>
+</nav>
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="COYANG" class="md-nav__button md-logo" data-md-component="logo" href="../../../../.." title="COYANG">
+<img alt="logo" src="../../../../../images/logo/COYANG-logos_white.png"/>
+</a>
+    COYANG
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../..">
+<span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../../../../../ai/rag/rag/">
+<span class="md-ellipsis">
+    
+  
+    AI
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../../../../">
+<span class="md-ellipsis">
+    
+  
+    Knowledge
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../../musings/">
+<span class="md-ellipsis">
+    
+  
+    Musings
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../../news/">
+<span class="md-ellipsis">
+    
+  
+    News
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../../about/">
+<span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#style-principles">
+<span class="md-ellipsis">
+      
+        Style principles
+      
+    </span>
+</a>
+<nav aria-label="Style principles" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#clarity">
+<span class="md-ellipsis">
+      
+        Clarity
+      
+    </span>
+</a>
+<nav aria-label="Clarity" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#what-is-the-code-actually-doing">
+<span class="md-ellipsis">
+      
+        What is the code actually doing?
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#why-is-the-code-doing-what-it-does">
+<span class="md-ellipsis">
+      
+        Why is the code doing what it does?
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#simplicity">
+<span class="md-ellipsis">
+      
+        Simplicity
+      
+    </span>
+</a>
+<nav aria-label="Simplicity" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#least-mechanism">
+<span class="md-ellipsis">
+      
+        Least mechanism
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#concision">
+<span class="md-ellipsis">
+      
+        Concision
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#maintainability">
+<span class="md-ellipsis">
+      
+        Maintainability
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#consistency">
+<span class="md-ellipsis">
+      
+        Consistency
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#core-guidelines">
+<span class="md-ellipsis">
+      
+        Core guidelines
+      
+    </span>
+</a>
+<nav aria-label="Core guidelines" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#formatting">
+<span class="md-ellipsis">
+      
+        Formatting
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#mixedcaps">
+<span class="md-ellipsis">
+      
+        MixedCaps
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#line-length">
+<span class="md-ellipsis">
+      
+        Line length
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#naming">
+<span class="md-ellipsis">
+      
+        Naming
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#local-consistency">
+<span class="md-ellipsis">
+      
+        Local consistency
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<div><h1 id="go-style-guide">Go Style Guide<a class="headerlink" href="#go-style-guide" title="Permanent link">¶</a></h1>
+<p>https://google.github.io/styleguide/go/guide</p>
+<p><a href="../">Overview</a> | <a href="./">Guide</a> | <a href="../decisions/">Decisions</a> |
+<a href="../best-practices/">Best practices</a></p>
+<!--
+-->
+<p>{% raw %}</p>
+<p><strong>Note:</strong> This is part of a series of documents that outline <a href="../">Go Style</a>
+at Google. This document is <strong><a href="../#normative">normative</a> and
+<a href="../#canonical">canonical</a></strong>. See <a href="../#about">the overview</a> for more
+information.</p>
+<p><a id="principles"></a></p>
+<h2 id="style-principles">Style principles<a class="headerlink" href="#style-principles" title="Permanent link">¶</a></h2>
+<p>There are a few overarching principles that summarize how to think about writing
+readable Go code. The following are attributes of readable code, in order of
+importance:</p>
+<ol>
+<li><strong><a href="#clarity">Clarity</a></strong>: The code’s purpose and rationale is clear to the reader.</li>
+<li><strong><a href="#simplicity">Simplicity</a></strong>: The code accomplishes its goal in the simplest way
+    possible.</li>
+<li><strong><a href="#concision">Concision</a></strong>: The code has a high signal-to-noise ratio.</li>
+<li><strong><a href="#maintainability">Maintainability</a></strong>: The code is written such that it can be easily
+    maintained.</li>
+<li><strong><a href="#consistency">Consistency</a></strong>: The code is consistent with the broader Google codebase.</li>
+</ol>
+<p><a id="clarity"></a></p>
+<h3 id="clarity">Clarity<a class="headerlink" href="#clarity" title="Permanent link">¶</a></h3>
+<p>The core goal of readability is to produce code that is clear to the reader.</p>
+<p>Clarity is primarily achieved with effective naming, helpful commentary, and
+efficient code organization.</p>
+<p>Clarity is to be viewed through the lens of the reader, not the author of the
+code. It is more important that code be easy to read than easy to write. Clarity
+in code has two distinct facets:</p>
+<ul>
+<li><a href="#clarity-purpose">What is the code actually doing?</a></li>
+<li><a href="#clarity-rationale">Why is the code doing what it does?</a></li>
+</ul>
+<p><a id="clarity-purpose"></a></p>
+<h4 id="what-is-the-code-actually-doing">What is the code actually doing?<a class="headerlink" href="#what-is-the-code-actually-doing" title="Permanent link">¶</a></h4>
+<p>Go is designed such that it should be relatively straightforward to see what the
+code is doing. In cases of uncertainty or where a reader may require prior
+knowledge in order to understand the code, it is worth investing time in order
+to make the code’s purpose clearer for future readers. For example, it may help
+to:</p>
+<ul>
+<li>Use more descriptive variable names</li>
+<li>Add additional commentary</li>
+<li>Break up the code with whitespace and comments</li>
+<li>Refactor the code into separate functions/methods to make it more modular</li>
+</ul>
+<p>There is no one-size-fits-all approach here, but it is important to prioritize
+clarity when developing Go code.</p>
+<p><a id="clarity-rationale"></a></p>
+<h4 id="why-is-the-code-doing-what-it-does">Why is the code doing what it does?<a class="headerlink" href="#why-is-the-code-doing-what-it-does" title="Permanent link">¶</a></h4>
+<p>The code’s rationale is often sufficiently communicated by the names of
+variables, functions, methods, or packages. Where it is not, it is important to
+add commentary. The “Why?” is especially important when the code contains
+nuances that a reader may not be familiar with, such as:</p>
+<ul>
+<li>A nuance in the language, e.g., a closure will be capturing a loop variable,
+    but the closure is many lines away</li>
+<li>A nuance of the business logic, e.g., an access control check that needs to
+    distinguish between the actual user and someone impersonating a user</li>
+</ul>
+<p>An API might require care to use correctly. For example, a piece of code may be
+intricate and difficult to follow for performance reasons, or a complex sequence
+of mathematical operations may use type conversions in an unexpected way. In
+these cases and many more, it is important that accompanying commentary and
+documentation explain these aspects so that future maintainers don’t make a
+mistake and so that readers can understand the code without needing to
+reverse-engineer it.</p>
+<p>It is also important to be aware that some attempts to provide clarity (such as
+adding extra commentary) can actually obscure the code’s purpose by adding
+clutter, restating what the code already says, contradicting the code, or adding
+maintenance burden to keep the comments up-to-date. Allow the code to speak for
+itself (e.g., by making the symbol names themselves self-describing) rather than
+adding redundant comments. It is often better for comments to explain why
+something is done, not what the code is doing.</p>
+<p>The Google codebase is largely uniform and consistent. It is often the case that
+code that stands out (e.g., by using an unfamiliar pattern) is doing so for a
+good reason, typically for performance. Maintaining this property is important
+to make it clear to readers where they should focus their attention when reading
+a new piece of code.</p>
+<p>The standard library contains many examples of this principle in action. Among
+them:</p>
+<ul>
+<li>Maintainer comments in
+    <a href="https://cs.opensource.google/go/go/+/refs/tags/go1.19.2:src/sort/sort.go"><code>package sort</code></a>.</li>
+<li>Good
+    <a href="https://cs.opensource.google/go/go/+/refs/tags/go1.19.2:src/sort/example_search_test.go">runnable examples in the same package</a>,
+    which benefit both users (they
+    <a href="https://pkg.go.dev/sort#pkg-examples">show up in godoc</a>) and maintainers
+    (they <a href="../decisions/#examples">run as part of tests</a>).</li>
+<li><a href="https://pkg.go.dev/strings#Cut"><code>strings.Cut</code></a> is only four lines of code,
+    but they improve the
+    <a href="https://github.com/golang/go/issues/46336">clarity and correctness of callsites</a>.</li>
+</ul>
+<p><a id="simplicity"></a></p>
+<h3 id="simplicity">Simplicity<a class="headerlink" href="#simplicity" title="Permanent link">¶</a></h3>
+<p>Your Go code should be simple for those using, reading, and maintaining it.</p>
+<p>Go code should be written in the simplest way that accomplishes its goals, both
+in terms of behavior and performance. Within the Google Go codebase, simple
+code:</p>
+<ul>
+<li>Is easy to read from top to bottom</li>
+<li>Does not assume that you already know what it is doing</li>
+<li>Does not assume that you can memorize all of the preceding code</li>
+<li>Does not have unnecessary levels of abstraction</li>
+<li>Does not have names that call attention to something mundane</li>
+<li>Makes the propagation of values and decisions clear to the reader</li>
+<li>Has comments that explain why, not what, the code is doing to avoid future
+    deviation</li>
+<li>Has documentation that stands on its own</li>
+<li>Has useful errors and useful test failures</li>
+<li>May often be mutually exclusive with “clever” code</li>
+</ul>
+<p>Tradeoffs can arise between code simplicity and API usage simplicity. For
+example, it may be worthwhile to have the code be more complex so that the end
+user of the API may more easily call the API correctly. In contrast, it may also
+be worthwhile to leave a bit of extra work to the end user of the API so that
+the code remains simple and easy to understand.</p>
+<p>When code needs complexity, the complexity should be added deliberately. This is
+typically necessary if additional performance is required or where there are
+multiple disparate customers of a particular library or service. Complexity may
+be justified, but it should come with accompanying documentation so that clients
+and future maintainers are able to understand and navigate the complexity. This
+should be supplemented with tests and examples that demonstrate its correct
+usage, especially if there is both a “simple” and a “complex” way to use the
+code.</p>
+<p>This principle does not imply that complex code cannot or should not be written
+in Go or that Go code is not allowed to be complex. We strive for a codebase
+that avoids unnecessary complexity so that when complexity does appear, it
+indicates that the code in question requires care to understand and maintain.
+Ideally, there should be accompanying commentary that explains the rationale and
+identifies the care that should be taken. This often arises when optimizing code
+for performance; doing so often requires a more complex approach, like
+preallocating a buffer and reusing it throughout a goroutine lifetime. When a
+maintainer sees this, it should be a clue that the code in question is
+performance-critical, and that should influence the care that is taken when
+making future changes. If employed unnecessarily, on the other hand, this
+complexity is a burden on those who need to read or change the code in the
+future.</p>
+<p>If code turns out to be very complex when its purpose should be simple, this is
+often a signal to revisit the implementation to see if there is a simpler way to
+accomplish the same thing.</p>
+<p><a id="least-mechanism"></a></p>
+<h4 id="least-mechanism">Least mechanism<a class="headerlink" href="#least-mechanism" title="Permanent link">¶</a></h4>
+<p>Where there are several ways to express the same idea, prefer the one that uses
+the most standard tools. Sophisticated machinery often exists, but should not be
+employed without reason. It is easy to add complexity to code as needed, whereas
+it is much harder to remove existing complexity after it has been found to be
+unnecessary.</p>
+<ol>
+<li>Aim to use a core language construct (for example a channel, slice, map,
+    loop, or struct) when sufficient for your use case.</li>
+<li>If there isn’t one, look for a tool within the standard library (like an
+    HTTP client or a template engine).</li>
+<li>Finally, consider whether there is a core library in the Google codebase
+    that is sufficient before introducing a new dependency or creating your own.</li>
+</ol>
+<p>As an example, consider production code that contains a flag bound to a variable
+with a default value which must be overridden in tests. Unless intending to test
+the program’s command-line interface itself (say, with <code>os/exec</code>), it is simpler
+and therefore preferable to override the bound value directly rather than by
+using <code>flag.Set</code>.</p>
+<p>Similarly, if a piece of code requires a set membership check, a boolean-valued
+map (e.g., <code>map[string]bool</code>) often suffices. Libraries that provide set-like
+types and functionality should only be used if more complicated operations are
+required that are impossible or overly complicated with a map.</p>
+<p><a id="concision"></a></p>
+<h3 id="concision">Concision<a class="headerlink" href="#concision" title="Permanent link">¶</a></h3>
+<p>Concise Go code has a high signal-to-noise ratio. It is easy to discern the
+relevant details, and the naming and structure guide the reader through these
+details.</p>
+<p>There are many things that can get in the way of surfacing the most salient
+details at any given time:</p>
+<ul>
+<li>Repetitive code</li>
+<li>Extraneous syntax</li>
+<li><a href="#naming">Opaque names</a></li>
+<li>Unnecessary abstraction</li>
+<li>Whitespace</li>
+</ul>
+<p>Repetitive code especially obscures the differences between each
+nearly-identical section, and requires a reader to visually compare similar
+lines of code to find the changes. <a href="https://github.com/golang/go/wiki/TableDrivenTests">Table-driven testing</a> is a good example of a
+mechanism that can concisely factor out the common code from the important
+details of each repetition, but the choice of which pieces to include in the
+table will have an impact on how easy the table is to understand.</p>
+<p>When considering multiple ways to structure code, it is worth considering which
+way makes important details the most apparent.</p>
+<p>Understanding and using common code constructions and idioms are also important
+for maintaining a high signal-to-noise ratio. For example, the following code
+block is very common in <a href="https://go.dev/blog/errors-are-values">error handling</a>, and the reader can quickly understand
+the purpose of this block.</p>
+<pre><code class="language-go">// Good:
+if err := doSomething(); err != nil {
+    // ...
+}
+</code></pre>
+<p>If code looks very similar to this but is subtly different, a reader may not
+notice the change. In cases like this, it is worth intentionally <a href="../best-practices/#signal-boost">“boosting”</a>
+the signal of the error check by adding a comment to call attention to it.</p>
+<pre><code class="language-go">// Good:
+if err := doSomething(); err == nil { // if NO error
+    // ...
+}
+</code></pre>
+<p><a id="maintainability"></a></p>
+<h3 id="maintainability">Maintainability<a class="headerlink" href="#maintainability" title="Permanent link">¶</a></h3>
+<p>Code is edited many more times than it is written. Readable code not only makes
+sense to a reader who is trying to understand how it works, but also to the
+programmer who needs to change it. Clarity is key.</p>
+<p>Maintainable code:</p>
+<ul>
+<li>Is easy for a future programmer to modify correctly</li>
+<li>Has APIs that are structured so that they can grow gracefully</li>
+<li>Is clear about the assumptions that it makes and chooses abstractions that
+    map to the structure of the problem, not to the structure of the code</li>
+<li>Avoids unnecessary coupling and doesn’t include features that are not used</li>
+<li>Has a comprehensive test suite to ensure promised behaviors are maintained
+    and important logic is correct, and the tests provide clear, actionable
+    diagnostics in case of failure</li>
+</ul>
+<p>When using abstractions like interfaces and types which by definition remove
+information from the context in which they are used, it is important to ensure
+that they provide sufficient benefit. Editors and IDEs can connect directly to a
+method definition and show the corresponding documentation when a concrete type
+is used, but can only refer to an interface definition otherwise. Interfaces are
+a powerful tool, but come with a cost, since the maintainer may need to
+understand the specifics of the underlying implementation in order to correctly
+use the interface, which must be explained within the interface documentation or
+at the call-site.</p>
+<p>Maintainable code also avoids hiding important details in places that are easy
+to overlook. For example, in each of the following lines of code, the presence
+or lack of a single character is critical to understand the line:</p>
+<pre><code class="language-go">// Bad:
+// The use of = instead of := can change this line completely.
+if user, err = db.UserByID(userID); err != nil {
+    // ...
+}
+</code></pre>
+<pre><code class="language-go">// Bad:
+// The ! in the middle of this line is very easy to miss.
+leap := (year%4 == 0) &amp;&amp; (!(year%100 == 0) || (year%400 == 0))
+</code></pre>
+<p>Neither of these are incorrect, but both could be written in a more explicit
+fashion, or could have an accompanying comment that calls attention to the
+important behavior:</p>
+<pre><code class="language-go">// Good:
+u, err := db.UserByID(userID)
+if err != nil {
+    return fmt.Errorf("invalid origin user: %s", err)
+}
+user = u
+</code></pre>
+<pre><code class="language-go">// Good:
+// Gregorian leap years aren't just year%4 == 0.
+// See https://en.wikipedia.org/wiki/Leap_year#Algorithm.
+var (
+    leap4   = year%4 == 0
+    leap100 = year%100 == 0
+    leap400 = year%400 == 0
+)
+leap := leap4 &amp;&amp; (!leap100 || leap400)
+</code></pre>
+<p>In the same way, a helper function that hides critical logic or an important
+edge-case could make it easy for a future change to fail to account for it
+properly.</p>
+<p>Predictable names are another feature of maintainable code. A user of a package
+or a maintainer of a piece of code should be able to predict the name of a
+variable, method, or function in a given context. Function parameters and
+receiver names for identical concepts should typically share the same name, both
+to keep documentation understandable and to facilitate refactoring code with
+minimal overhead.</p>
+<p>Maintainable code minimizes its dependencies (both implicit and explicit).
+Depending on fewer packages means fewer lines of code that can affect behavior.
+Avoiding dependencies on internal or undocumented behavior makes code less
+likely to impose a maintenance burden when those behaviors change in the future.</p>
+<p>When considering how to structure or write code, it is worth taking the time to
+think through ways in which the code may evolve over time. If a given approach
+is more conducive to easier and safer future changes, that is often a good
+trade-off, even if it means a slightly more complicated design.</p>
+<p><a id="consistency"></a></p>
+<h3 id="consistency">Consistency<a class="headerlink" href="#consistency" title="Permanent link">¶</a></h3>
+<p>Consistent code is code that looks, feels, and behaves like similar code
+throughout the broader codebase, within the context of a team or package, and
+even within a single file.</p>
+<p>Consistency concerns do not override any of the principles above, but if a tie
+must be broken, it is often beneficial to break it in favor of consistency.</p>
+<p>Consistency within a package is often the most immediately important level of
+consistency. It can be very jarring if the same problem is approached in
+multiple ways throughout a package, or if the same concept has many names within
+a file. However, even this should not override documented style principles or
+global consistency.</p>
+<p><a id="core"></a></p>
+<h2 id="core-guidelines">Core guidelines<a class="headerlink" href="#core-guidelines" title="Permanent link">¶</a></h2>
+<p>These guidelines collect the most important aspects of Go style that all Go code
+is expected to follow. We expect that these principles be learned and followed
+by the time readability is granted. These are not expected to change frequently,
+and new additions will have to clear a high bar.</p>
+<p>The guidelines below expand on the recommendations in <a href="https://go.dev/doc/effective_go">Effective Go</a>, which
+provide a common baseline for Go code across the entire community.</p>
+<p><a id="formatting"></a></p>
+<h3 id="formatting">Formatting<a class="headerlink" href="#formatting" title="Permanent link">¶</a></h3>
+<p>All Go source files must conform to the format outputted by the <code>gofmt</code> tool.
+This format is enforced by a presubmit check in the Google codebase.
+<a href="https://docs.bazel.build/versions/main/be/general.html#genrule">Generated code</a> should generally also be formatted (e.g., by using
+[<code>format.Source</code>]), as it is also browsable in Code Search.</p>
+<p><a id="mixed-caps"></a></p>
+<h3 id="mixedcaps">MixedCaps<a class="headerlink" href="#mixedcaps" title="Permanent link">¶</a></h3>
+<p>Go source code uses <code>MixedCaps</code> or <code>mixedCaps</code> (camel case) rather than
+underscores (snake case) when writing multi-word names.</p>
+<p>This applies even when it breaks conventions in other languages. For example, a
+constant is <code>MaxLength</code> (not <code>MAX_LENGTH</code>) if exported and <code>maxLength</code> (not
+<code>max_length</code>) if unexported.</p>
+<p>Local variables are considered <a href="https://go.dev/ref/spec#Exported_identifiers">unexported</a> for the purpose of choosing the
+initial capitalization.</p>
+<!--#include file="/go/g3doc/style/includes/special-name-exception.md"-->
+<p><a id="line-length"></a></p>
+<h3 id="line-length">Line length<a class="headerlink" href="#line-length" title="Permanent link">¶</a></h3>
+<p>There is no fixed line length for Go source code. If a line feels too long, it
+should be refactored instead of broken. If it is already as short as it is
+practical for it to be, the line should be allowed to remain long.</p>
+<p>Do not split a line:</p>
+<ul>
+<li>Before an <a href="../decisions/#indentation-confusion">indentation change</a> (e.g.,
+    function declaration, conditional)</li>
+<li>To make a long string (e.g., a URL) fit into multiple shorter lines</li>
+</ul>
+<p><a id="naming"></a></p>
+<h3 id="naming">Naming<a class="headerlink" href="#naming" title="Permanent link">¶</a></h3>
+<p>Naming is more art than science. In Go, names tend to be somewhat shorter than
+in many other languages, but the same <a href="https://testing.googleblog.com/2017/10/code-health-identifiernamingpostforworl.html">general guidelines</a> apply. Names should:</p>
+<ul>
+<li>Not feel <a href="../decisions/#repetition">repetitive</a> when they are used</li>
+<li>Take the context into consideration</li>
+<li>Not repeat concepts that are already clear</li>
+</ul>
+<p>You can find more specific guidance on naming in <a href="../decisions/#naming">decisions</a>.</p>
+<p><a id="local-consistency"></a></p>
+<h3 id="local-consistency">Local consistency<a class="headerlink" href="#local-consistency" title="Permanent link">¶</a></h3>
+<p>Where the style guide has nothing to say about a particular point of style,
+authors are free to choose the style that they prefer, unless the code in close
+proximity (usually within the same file or package, but sometimes within a team
+or project directory) has taken a consistent stance on the issue.</p>
+<p>Examples of <strong>valid</strong> local style considerations:</p>
+<ul>
+<li>Use of <code>%s</code> or <code>%v</code> for formatted printing of errors</li>
+<li>Usage of buffered channels in lieu of mutexes</li>
+</ul>
+<p>Examples of <strong>invalid</strong> local style considerations:</p>
+<ul>
+<li>Line length restrictions for code</li>
+<li>Use of assertion-based testing libraries</li>
+</ul>
+<p>If the local style disagrees with the style guide but the readability impact is
+limited to one file, it will generally be surfaced in a code review for which a
+consistent fix would be outside the scope of the CL in question. At that point,
+it is appropriate to file a bug to track the fix.</p>
+<p>If a change would worsen an existing style deviation, expose it in more API
+surfaces, expand the number of files in which the deviation is present, or
+introduce an actual bug, then local consistency is no longer a valid
+justification for violating the style guide for new code. In these cases, it is
+appropriate for the author to clean up the existing codebase in the same CL,
+perform a refactor in advance of the current CL, or find an alternative that at
+least does not make the local problem worse.</p>
+<!--
+-->
+<p>{% endraw %}</p></div>
+</article>
+</div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+<button class="md-top md-icon" data-md-component="top" hidden="" type="button">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  Back to top
+</button>
+</main>
+<footer class="md-footer">
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"annotate": null, "base": "../../../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.top", "navigation.prune", "search.highlight", "search.suggest", "content.code.annotate", "content.code.copy"], "search": "../../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+<script src="../../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,448 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="Coyang's Personal Blogs" name="description"/>
+<meta content="coyang" name="author"/>
+<link href="https://coyang.top/knowledge/tech/testing/pact_testing/" rel="canonical"/>
+<link href="../../../../images/logo/COYANG-logos_transparent.png" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.7.1" name="generator"/>
+<title>契约测试 - COYANG</title>
+<link href="../../../../assets/stylesheets/main.484c7ddc.min.css" rel="stylesheet"/>
+<script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#_1">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="COYANG" class="md-header__button md-logo" data-md-component="logo" href="../../../.." title="COYANG">
+<img alt="logo" src="../../../../images/logo/COYANG-logos_white.png"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            COYANG
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              契约测试
+            
+          </span>
+</div>
+</div>
+</div>
+<script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</label>
+<nav aria-label="Search" class="md-search__options">
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" title="Clear" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+</button>
+</nav>
+<div class="md-search__suggest" data-md-component="search-suggest"></div>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<nav aria-label="Tabs" class="md-tabs" data-md-component="tabs">
+<div class="md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../..">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../../ai/rag/rag/">
+          
+  
+  
+  AI
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../">
+          
+  
+  
+  Knowledge
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../../musings/">
+        
+  
+  
+    
+  
+  Musings
+
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../../news/">
+        
+  
+  
+    
+  
+  News
+
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../../about/">
+        
+  
+  
+    
+  
+  About
+
+      </a>
+</li>
+</ul>
+</div>
+</nav>
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="COYANG" class="md-nav__button md-logo" data-md-component="logo" href="../../../.." title="COYANG">
+<img alt="logo" src="../../../../images/logo/COYANG-logos_white.png"/>
+</a>
+    COYANG
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../..">
+<span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../../../../ai/rag/rag/">
+<span class="md-ellipsis">
+    
+  
+    AI
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../../../">
+<span class="md-ellipsis">
+    
+  
+    Knowledge
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../musings/">
+<span class="md-ellipsis">
+    
+  
+    Musings
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../news/">
+<span class="md-ellipsis">
+    
+  
+    News
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../about/">
+<span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+<span class="md-ellipsis">
+      
+        什么是契约测试
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#api">
+<span class="md-ellipsis">
+      
+        契约测试、单元测试、API测试和集成测试的区别
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#pact">
+<span class="md-ellipsis">
+      
+        PACT
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#references">
+<span class="md-ellipsis">
+      
+        References
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<div><h1 id="_1">契约测试<a class="headerlink" href="#_1" title="Permanent link">¶</a></h1>
+<p><img alt="PACT contract testing" src="../../../../images/pact_testing/pact-contract-testing.jpg"/></p>
+<h2 id="_2">什么是契约测试<a class="headerlink" href="#_2" title="Permanent link">¶</a></h2>
+<p>当我们讨论契约测试（Consumer Driven Contracts，CDC）时，它是一种软件开发中的测试
+方法，旨在确保在不同服务之间的集成中保持一致性和可靠性。</p>
+<p>在传统的集成测试中，通常会使用一种中心化的方法，其中一个服务（通常是供应者）提供
+一个契约或接口定义，然后其他服务（通常是消费者）编写测试来验证他们的实现是否符合
+这个契约。这种方法的问题是，消费者的需求和期望无法完全体现在契约中，因此可能会导
+致集成问题。</p>
+<p>CDC的方法与之不同，它着重于消费者的需求，并允许消费者定义契约。在CDC中，每个消费
+者都可以为其与供应者的交互定义自己的契约。这个契约描述了消费者希望供应者履行的行
+为和期望。供应者会根据这些契约编写测试来验证其实现是否符合消费者的要求。这样一
+来，消费者和供应者之间的集成问题可以在开发阶段就被发现和解决。</p>
+<p>CDC的优势在于它能够提供更好的协作和解耦。消费者可以独立地定义和更新契约，而供应
+者则可以根据这些契约来测试和验证他们的实现。这种方式使得不同服务之间的集成更加灵
+活和可靠，因为任何变化都会在测试阶段被及时发现并解决。</p>
+<p>总结起来，契约测试是一种通过消费者定义契约来确保不同服务之间一致性和可靠性的测试
+方法。它提供了更好的协作和解耦，并帮助开发人员在早期发现和解决集成问题。</p>
+<h2 id="api">契约测试、单元测试、API测试和集成测试的区别<a class="headerlink" href="#api" title="Permanent link">¶</a></h2>
+<p>当涉及到测试方法时，契约测试、单元测试、API测试和集成测试是几种不同的方法，用于
+测试软件的不同方面和层次。以下是它们之间的区别：</p>
+<ol>
+<li>
+<p>契约测试（Consumer Driven Contracts）：
+   - 契约测试关注不同服务之间的集成，以确保一致性和可靠性。
+   - 消费者定义契约，描述他们对供应者的期望和行为。
+   - 契约测试通过验证供应者的实现是否符合消费者的契约来发现和解决集成问题。</p>
+</li>
+<li>
+<p>单元测试（Unit Testing）：
+   - 单元测试是对软件中最小的可测试单元（如函数、方法或类）进行测试。
+   - 它的目的是验证单个单元的行为是否符合预期，通常在开发过程中进行。
+   - 单元测试通过提供输入并检查输出，对单元的各个方面进行验证。</p>
+</li>
+<li>
+<p>API测试（API Testing）：
+   - API测试是针对应用程序编程接口（API）进行的测试。
+   - 它的目的是验证API的功能、性能和安全性等方面。
+   - API测试通常涉及对API端点的请求和响应进行测试，以确保其行为符合规范和预期。</p>
+</li>
+<li>
+<p>集成测试（Integration Testing）：
+   - 集成测试是在多个组件或模块之间进行的测试，以验证它们在集成时是否正常工作。
+   - 它的目的是测试组件之间的接口和交互，并发现由于集成而引入的错误。
+   - 集成测试可以涵盖不同层次的集成，如模块级别的集成测试、系统级别的集成测试
+     等。</p>
+</li>
+</ol>
+<h2 id="pact">PACT<a class="headerlink" href="#pact" title="Permanent link">¶</a></h2>
+<p>Pact是一种流行的契约测试框架，它用于在服务之间进行契约测试。Pact框架的核心思想是
+消费者和供应者之间的契约定义和验证，以确保服务之间的一致性和可靠性。</p>
+<p>Pact框架的主要组成部分包括消费者端和供应者端。下面是它们的功能和工作原理的简要介
+绍：</p>
+<ol>
+<li>
+<p>消费者端：
+   - 消费者是使用服务的一方，他们使用Pact框架来定义契约。
+   - 消费者定义了他们期望从供应者那里接收的请求和响应，并生成一个契约文件。
+   - 契约文件描述了消费者的请求和供应者应该响应的预期结果。</p>
+</li>
+<li>
+<p>供应者端：
+   - 供应者是提供服务的一方，他们使用Pact框架来验证契约。
+   - 供应者使用消费者生成的契约文件来模拟消费者的请求，并验证他们的服务是否正确
+     响应。
+   - 如果供应者的实现与契约一致，测试将通过；否则，将报告契约违规或不一致的错
+     误。</p>
+</li>
+</ol>
+<p>Pact框架的工作流程如下：</p>
+<ol>
+<li>
+<p>消费者和供应者之间定义契约：消费者根据他们对供应者的期望，定义请求和预期响应
+   的契约。</p>
+</li>
+<li>
+<p>消费者生成契约文件：消费者使用Pact框架生成包含契约信息的文件。这个契约文件将
+   被供应者使用。</p>
+</li>
+<li>
+<p>供应者验证契约：供应者使用契约文件来模拟消费者的请求，并验证他们的服务是否按
+   照契约的要求进行响应。</p>
+</li>
+<li>
+<p>契约测试结果：Pact框架会生成测试报告，显示契约测试的结果。如果契约一致，测试
+   通过；否则，将显示契约违规或不一致的错误。</p>
+</li>
+</ol>
+<p>Pact框架的优势包括：</p>
+<ul>
+<li>提供了一种轻量级且易于使用的契约测试方法。</li>
+<li>允许消费者和供应者在开发过程中独立地定义和验证契约。</li>
+<li>通过早期发现和解决集成问题，促进了团队之间的协作和解耦。</li>
+</ul>
+<h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">¶</a></h2>
+<ul>
+<li><a href="https://technology.lastminute.com/contract-testing-asynchronous-messaging-pact-junit-mockk/">Contract testing asynchronous messaging with Pact and
+  MockK</a></li>
+<li>https://www.infoq.cn/article/U8walzaYhwOZQzsVypVj</li>
+<li><a href="https://www.infoq.cn/article/contract-testing-spring-cloud-contract">使用契约测试提高分布式系统的质
+  量</a></li>
+<li><a href="https://xie.infoq.cn/article/1c490dabcb429209b07e5b456">契约测试理论篇</a></li>
+<li><a href="https://xie.infoq.cn/article/56006dcd3893324e02d2e5c88">契约测试实践篇</a></li>
+<li><a href="https://www.cnblogs.com/jinjiangongzuoshi/p/7815243.html">微服务下的契约测试(CDC)解
+  读</a></li>
+<li><a href="https://github.com/pact-foundation/pact-specification">pact-specification</a></li>
+<li><a href="https://xie.infoq.cn/article/4a7132566e2f2a032ae9bb0e0">契约测试：解决微服务测试的问
+  题</a></li>
+<li><a href="https://xie.infoq.cn/article/fd65cc64d9e66edca750d3ded">干货时间：聊聊 DevOps 下的技术系列之契约测
+  试</a></li>
+<li><a href="https://time.geekbang.org/column/article/509551">集成测试（三）：护航微服务集群迭代升
+  级</a></li>
+<li><a href="https://martinfowler.com/articles/practical-test-pyramid.html">The Practical Test
+  Pyramid</a></li>
+<li><a href="https://www.infoq.cn/article/g6D7e4ki76V3dRBWkrrK">基于契约的开发：通过明确需求优化软件开发流
+  程</a></li>
+<li><a href="https://github.com/pact-foundation/pact-workshop-go">pact-workshop-go</a></li>
+</ul></div>
+</article>
+</div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+<button class="md-top md-icon" data-md-component="top" hidden="" type="button">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  Back to top
+</button>
+</main>
+<footer class="md-footer">
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.top", "navigation.prune", "search.highlight", "search.suggest", "content.code.annotate", "content.code.copy"], "search": "../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+<script src="../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</body>
+</html>

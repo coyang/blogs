@@ -1,0 +1,382 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="Coyang's Personal Blogs" name="description"/>
+<meta content="coyang" name="author"/>
+<link href="https://coyang.top/knowledge/software_development/scrum/scrum/" rel="canonical"/>
+<link href="../../../../images/logo/COYANG-logos_transparent.png" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.7.1" name="generator"/>
+<title>Scrum - COYANG</title>
+<link href="../../../../assets/stylesheets/main.484c7ddc.min.css" rel="stylesheet"/>
+<script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#scrum">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="COYANG" class="md-header__button md-logo" data-md-component="logo" href="../../../.." title="COYANG">
+<img alt="logo" src="../../../../images/logo/COYANG-logos_white.png"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            COYANG
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Scrum
+            
+          </span>
+</div>
+</div>
+</div>
+<script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</label>
+<nav aria-label="Search" class="md-search__options">
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" title="Clear" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+</button>
+</nav>
+<div class="md-search__suggest" data-md-component="search-suggest"></div>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<nav aria-label="Tabs" class="md-tabs" data-md-component="tabs">
+<div class="md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../..">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../../ai/rag/rag/">
+          
+  
+  
+  AI
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../">
+          
+  
+  
+  Knowledge
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../../musings/">
+        
+  
+  
+    
+  
+  Musings
+
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../../news/">
+        
+  
+  
+    
+  
+  News
+
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../../about/">
+        
+  
+  
+    
+  
+  About
+
+      </a>
+</li>
+</ul>
+</div>
+</nav>
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="COYANG" class="md-nav__button md-logo" data-md-component="logo" href="../../../.." title="COYANG">
+<img alt="logo" src="../../../../images/logo/COYANG-logos_white.png"/>
+</a>
+    COYANG
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../..">
+<span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../../../../ai/rag/rag/">
+<span class="md-ellipsis">
+    
+  
+    AI
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../../../">
+<span class="md-ellipsis">
+    
+  
+    Knowledge
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../musings/">
+<span class="md-ellipsis">
+    
+  
+    Musings
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../news/">
+<span class="md-ellipsis">
+    
+  
+    News
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../about/">
+<span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#how-to-be-a-scrum-master">
+<span class="md-ellipsis">
+      
+        How to be a Scrum Master
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<div><h1 id="scrum">Scrum<a class="headerlink" href="#scrum" title="Permanent link">¶</a></h1>
+<p>Scrum是一种敏捷项目管理方法，通常用于软件开发，但也适用于其他领域。它的目标是帮
+助团队高效地完成复杂的项目，同时保持灵活性和适应性。</p>
+<p>Scrum中的核心是团队合作、自组织和持续改进。这里有几个重要的角色：</p>
+<ul>
+<li>
+<p>产品负责人(Product Owner)：负责明确项目的愿景和需求，以及优先级排序。他们代表
+利益相关者，确保团队开发的产品符合客户和业务需求。</p>
+</li>
+<li>
+<p>Scrum团队(Development Team)：由开发人员组成，负责将产品需求转化为实际可用的功
+能。团队是自组织的，意味着他们自己决定如何完成工作。</p>
+</li>
+<li>
+<p>Scrum大师(Scrum Master)：SM的职责是帮助团队遵循Scrum流程，清除障碍，确保他们能
+高效地工作。</p>
+</li>
+</ul>
+<p>Scrum工作周期被称为Sprint（迭代），通常是2到4周。在每个Sprint开始之前，团队和产
+品负责人会开会确定要实现的功能和目标。然后团队会制定一个计划，决定如何在Sprint期
+间完成这些功能。</p>
+<p>每天，团队都会进行短暂的日常站会(Daily Scrum)，大约15分钟，分享他们昨天完成了什
+么，今天要做什么，以及遇到了哪些问题。这有助于团队保持沟通和对目标的专注。</p>
+<p>Sprint结束时，团队会进行一个回顾会(Sprint Review)，向利益相关者演示他们完成的工
+作，并接受反馈。然后他们会进行Sprint总结会(Sprint Retrospective)，讨论在Sprint过
+程中遇到的问题，以及如何改进工作方式。</p>
+<p>Scrum的优势在于：</p>
+<p>灵活性：可以根据需求进行调整和改进。透明度：所有人都知道项目的进展情况和困难。持
+续改进：团队不断找到改进工作的方法，提高效率。</p>
+<h2 id="how-to-be-a-scrum-master">How to be a Scrum Master<a class="headerlink" href="#how-to-be-a-scrum-master" title="Permanent link">¶</a></h2>
+<ol>
+<li>
+<p>深入了解Scrum： 确保你对Scrum框架、原则和价值观有深入的理解。掌握Scrum的工作
+   流程、角色和仪式，以便能够有效地引导团队。</p>
+</li>
+<li>
+<p>培养协调和沟通技巧： Scrum Master的角色强调促进团队合作和沟通。你应该擅长倾
+   听、引导讨论，并能解决潜在的冲突。</p>
+</li>
+<li>
+<p>引导自组织团队： Scrum团队应该是自组织的，Scrum Master的角色是帮助团队发挥最
+   佳水平。鼓励成员承担责任，同时提供支持和资源。</p>
+</li>
+<li>
+<p>解决障碍： 确保团队在开发过程中不受阻碍，及时解决问题和障碍，帮助团队顺利推
+   进。</p>
+</li>
+<li>
+<p>保护团队： 在Sprint期间，确保团队不会受到干扰，保持专注，不要受到过多的外部压
+   力。</p>
+</li>
+<li>
+<p>持续学习： Scrum Master应该时刻保持学习的态度，了解新的工具、技术和最佳实践，
+   以提高Scrum团队的效率和质量。</p>
+</li>
+<li>
+<p>关注团队动态： 留意团队成员之间的相互作用和动态。了解团队成员的需求，帮助他们
+   达到最佳状态。</p>
+</li>
+<li>
+<p>教练技能： 成为团队成员和利益相关者的教练，帮助他们理解Scrum并遵循最佳实践。</p>
+</li>
+<li>
+<p>促进持续改进： 在Sprint Retrospective中鼓励团队发现问题，并帮助他们找到改进方
+   法，确保团队在每个Sprint都能变得更好。</p>
+</li>
+<li>
+<p>适应性和灵活性： Scrum Master需要适应不同的情况和团队文化，灵活应对变化。</p>
+</li>
+<li>
+<p>支持产品负责人： 与产品负责人密切合作，确保产品待办清单（Product Backlog）的
+   优先级和内容明确。</p>
+</li>
+<li>
+<p>树立榜样： 成为团队的榜样，展现积极的工作态度和价值观。</p>
+</li>
+</ol>
+<p>最后，Scrum Master不是项目经理或领导者，而是促进团队自主和协作的敏捷教练。帮助团
+队发挥最佳水平，并致力于让团队在敏捷开发过程中取得成功。</p></div>
+</article>
+</div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+<button class="md-top md-icon" data-md-component="top" hidden="" type="button">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  Back to top
+</button>
+</main>
+<footer class="md-footer">
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.top", "navigation.prune", "search.highlight", "search.suggest", "content.code.annotate", "content.code.copy"], "search": "../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+<script src="../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</body>
+</html>

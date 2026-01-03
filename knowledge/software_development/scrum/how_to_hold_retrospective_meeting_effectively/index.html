@@ -1,0 +1,446 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="Coyang's Personal Blogs" name="description"/>
+<meta content="coyang" name="author"/>
+<link href="https://coyang.top/knowledge/software_development/scrum/how_to_hold_retrospective_meeting_effectively/" rel="canonical"/>
+<link href="../../../../images/logo/COYANG-logos_transparent.png" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.7.1" name="generator"/>
+<title>How to hold an effective retrospective meeting - COYANG</title>
+<link href="../../../../assets/stylesheets/main.484c7ddc.min.css" rel="stylesheet"/>
+<script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#how-to-hold-an-effective-retrospective-meeting">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="COYANG" class="md-header__button md-logo" data-md-component="logo" href="../../../.." title="COYANG">
+<img alt="logo" src="../../../../images/logo/COYANG-logos_white.png"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            COYANG
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              How to hold an effective retrospective meeting
+            
+          </span>
+</div>
+</div>
+</div>
+<script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</label>
+<nav aria-label="Search" class="md-search__options">
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" title="Clear" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+</button>
+</nav>
+<div class="md-search__suggest" data-md-component="search-suggest"></div>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<nav aria-label="Tabs" class="md-tabs" data-md-component="tabs">
+<div class="md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../..">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../../ai/rag/rag/">
+          
+  
+  
+  AI
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../">
+          
+  
+  
+  Knowledge
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../../musings/">
+        
+  
+  
+    
+  
+  Musings
+
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../../news/">
+        
+  
+  
+    
+  
+  News
+
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../../about/">
+        
+  
+  
+    
+  
+  About
+
+      </a>
+</li>
+</ul>
+</div>
+</nav>
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="COYANG" class="md-nav__button md-logo" data-md-component="logo" href="../../../.." title="COYANG">
+<img alt="logo" src="../../../../images/logo/COYANG-logos_white.png"/>
+</a>
+    COYANG
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../..">
+<span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../../../../ai/rag/rag/">
+<span class="md-ellipsis">
+    
+  
+    AI
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../../../">
+<span class="md-ellipsis">
+    
+  
+    Knowledge
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../musings/">
+<span class="md-ellipsis">
+    
+  
+    Musings
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../news/">
+<span class="md-ellipsis">
+    
+  
+    News
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../about/">
+<span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1-set-the-stage">
+<span class="md-ellipsis">
+      
+        1. Set the Stage
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2-gather-data">
+<span class="md-ellipsis">
+      
+        2. Gather Data
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3-generate-insights">
+<span class="md-ellipsis">
+      
+        3. Generate Insights
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#4-identify-action-items">
+<span class="md-ellipsis">
+      
+        4. Identify Action Items
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#5-prioritize">
+<span class="md-ellipsis">
+      
+        5. Prioritize
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#6-create-a-plan">
+<span class="md-ellipsis">
+      
+        6. Create a Plan
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#7-reflect-on-the-retrospective">
+<span class="md-ellipsis">
+      
+        7. Reflect on the Retrospective
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#8-follow-up">
+<span class="md-ellipsis">
+      
+        8. Follow Up
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#9-adapt-and-experiment">
+<span class="md-ellipsis">
+      
+        9. Adapt and Experiment
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<div><h1 id="how-to-hold-an-effective-retrospective-meeting">How to hold an effective retrospective meeting<a class="headerlink" href="#how-to-hold-an-effective-retrospective-meeting" title="Permanent link">¶</a></h1>
+<p>Retrospectives are a crucial component of the Agile process, providing your team
+with a chance to reflect on what went well, what didn’t, and how to improve in
+the next iteration. Here’s a step-by-step guide:</p>
+<h2 id="1-set-the-stage">1. Set the Stage<a class="headerlink" href="#1-set-the-stage" title="Permanent link">¶</a></h2>
+<ul>
+<li>Choose a comfortable environment, either in-person or virtual, where team
+  members can openly communicate.</li>
+<li>Begin with an icebreaker or a quick warm-up activity to get everyone engaged
+  and in the right mindset.</li>
+</ul>
+<h2 id="2-gather-data">2. Gather Data<a class="headerlink" href="#2-gather-data" title="Permanent link">¶</a></h2>
+<ul>
+<li>Have each team member share their thoughts on the recent iteration. This can
+  include what they felt went well, what didn’t go as expected, and any concerns
+  or observations they have.</li>
+</ul>
+<h2 id="3-generate-insights">3. Generate Insights<a class="headerlink" href="#3-generate-insights" title="Permanent link">¶</a></h2>
+<ul>
+<li>Organize the feedback into categories, such as “What Went Well,” “What Didn’t
+  Go Well,” and “Ideas for Improvement.”</li>
+<li>Encourage team members to discuss and elaborate on each point. Aim to
+  understand the root causes rather than just the surface-level issues.</li>
+</ul>
+<h2 id="4-identify-action-items">4. Identify Action Items<a class="headerlink" href="#4-identify-action-items" title="Permanent link">¶</a></h2>
+<ul>
+<li>Collaboratively decide on specific action items to address the areas that need
+  improvement.</li>
+<li>Use techniques like “Start, Stop, Continue” or “Sailboat” to guide the
+  discussion towards actionable solutions.</li>
+<li>Make sure the action items are feasible, measurable, and relevant.</li>
+</ul>
+<h2 id="5-prioritize">5. Prioritize<a class="headerlink" href="#5-prioritize" title="Permanent link">¶</a></h2>
+<ul>
+<li>If there are multiple action items, prioritize them based on their impact and
+  feasibility. This ensures that the team focuses on changes that will yield the
+  most significant improvements.</li>
+</ul>
+<h2 id="6-create-a-plan">6. Create a Plan<a class="headerlink" href="#6-create-a-plan" title="Permanent link">¶</a></h2>
+<ul>
+<li>Assign responsibilities for each action item to team members. Everyone should
+  have a role in implementing the improvements.</li>
+<li>Set clear deadlines for each action item to avoid procrastination and ensure
+  accountability.</li>
+</ul>
+<h2 id="7-reflect-on-the-retrospective">7. Reflect on the Retrospective<a class="headerlink" href="#7-reflect-on-the-retrospective" title="Permanent link">¶</a></h2>
+<ul>
+<li>Before concluding the meeting, gather feedback from the team about the
+  retrospective itself. Ask questions like “How could this retrospective have
+  been more effective?” or “What format or activities worked well?”</li>
+</ul>
+<h2 id="8-follow-up">8. Follow Up<a class="headerlink" href="#8-follow-up" title="Permanent link">¶</a></h2>
+<ul>
+<li>Track progress on the action items in the subsequent iterations. Use a visual
+  representation, like a Kanban board or a simple spreadsheet, to monitor their
+  status.</li>
+<li>Celebrate successes and acknowledge efforts made toward improvement during the
+  next retrospective.</li>
+</ul>
+<h2 id="9-adapt-and-experiment">9. Adapt and Experiment<a class="headerlink" href="#9-adapt-and-experiment" title="Permanent link">¶</a></h2>
+<ul>
+<li>Retrospectives are about continuous improvement. Experiment with different
+  retrospective formats, activities, and timings to keep the process fresh and
+  effective.</li>
+<li>Regularly revisit and adjust your retrospective process based on team feedback
+  and evolving needs.</li>
+</ul>
+<p>Remember, the key to a successful retrospective is creating an environment where
+team members feel safe to share their thoughts and opinions. As the Agile
+Master, your role is to facilitate the discussion, ensure equal participation,
+and guide the team toward actionable outcomes.</p></div>
+</article>
+</div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+<button class="md-top md-icon" data-md-component="top" hidden="" type="button">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  Back to top
+</button>
+</main>
+<footer class="md-footer">
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.top", "navigation.prune", "search.highlight", "search.suggest", "content.code.annotate", "content.code.copy"], "search": "../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+<script src="../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</body>
+</html>

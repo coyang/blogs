@@ -1,0 +1,527 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="Coyang's Personal Blogs" name="description"/>
+<meta content="coyang" name="author"/>
+<link href="https://coyang.top/knowledge/programming_languages/go/go_style/" rel="canonical"/>
+<link href="../../../../images/logo/COYANG-logos_transparent.png" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.7.1" name="generator"/>
+<title>Go Style - COYANG</title>
+<link href="../../../../assets/stylesheets/main.484c7ddc.min.css" rel="stylesheet"/>
+<script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#go-style">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="COYANG" class="md-header__button md-logo" data-md-component="logo" href="../../../.." title="COYANG">
+<img alt="logo" src="../../../../images/logo/COYANG-logos_white.png"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            COYANG
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Go Style
+            
+          </span>
+</div>
+</div>
+</div>
+<script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</label>
+<nav aria-label="Search" class="md-search__options">
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" title="Clear" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+</button>
+</nav>
+<div class="md-search__suggest" data-md-component="search-suggest"></div>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<nav aria-label="Tabs" class="md-tabs" data-md-component="tabs">
+<div class="md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../..">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../../ai/rag/rag/">
+          
+  
+  
+  AI
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../">
+          
+  
+  
+  Knowledge
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../../musings/">
+        
+  
+  
+    
+  
+  Musings
+
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../../news/">
+        
+  
+  
+    
+  
+  News
+
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../../about/">
+        
+  
+  
+    
+  
+  About
+
+      </a>
+</li>
+</ul>
+</div>
+</nav>
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="COYANG" class="md-nav__button md-logo" data-md-component="logo" href="../../../.." title="COYANG">
+<img alt="logo" src="../../../../images/logo/COYANG-logos_white.png"/>
+</a>
+    COYANG
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../..">
+<span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../../../../ai/rag/rag/">
+<span class="md-ellipsis">
+    
+  
+    AI
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../../../">
+<span class="md-ellipsis">
+    
+  
+    Knowledge
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../musings/">
+<span class="md-ellipsis">
+    
+  
+    Musings
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../news/">
+<span class="md-ellipsis">
+    
+  
+    News
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../about/">
+<span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#about">
+<span class="md-ellipsis">
+      
+        About
+      
+    </span>
+</a>
+<nav aria-label="About" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#documents">
+<span class="md-ellipsis">
+      
+        Documents
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#definitions">
+<span class="md-ellipsis">
+      
+        Definitions
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#additional-references">
+<span class="md-ellipsis">
+      
+        Additional references
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<div><h1 id="go-style">Go Style<a class="headerlink" href="#go-style" title="Permanent link">¶</a></h1>
+<p>https://google.github.io/styleguide/go</p>
+<p><a href="./">Overview</a> | <a href="guide/">Guide</a> | <a href="decisions/">Decisions</a> |
+<a href="best-practices/">Best practices</a></p>
+<!--
+-->
+<p>{% raw %}</p>
+<p><a id="about"></a></p>
+<h2 id="about">About<a class="headerlink" href="#about" title="Permanent link">¶</a></h2>
+<p>The Go Style Guide and accompanying documents codify the current best approaches
+for writing readable and idiomatic Go. Adherence to the Style Guide is not
+intended to be absolute, and these documents will never be exhaustive. Our
+intention is to minimize the guesswork of writing readable Go so that newcomers
+to the language can avoid common mistakes. The Style Guide also serves to unify
+the style guidance given by anyone reviewing Go code at Google.</p>
+<table>
+<thead>
+<tr>
+<th>Document</th>
+<th>Link</th>
+<th>Primary Audience</th>
+<th><a href="#normative">Normative</a></th>
+<th><a href="#canonical">Canonical</a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Style Guide</strong></td>
+<td>https://google.github.io/styleguide/go/guide</td>
+<td>Everyone</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td><strong>Style Decisions</strong></td>
+<td>https://google.github.io/styleguide/go/decisions</td>
+<td>Readability Mentors</td>
+<td>Yes</td>
+<td>No</td>
+</tr>
+<tr>
+<td><strong>Best Practices</strong></td>
+<td>https://google.github.io/styleguide/go/best-practices</td>
+<td>Anyone interested</td>
+<td>No</td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
+<p><a id="docs"></a></p>
+<h3 id="documents">Documents<a class="headerlink" href="#documents" title="Permanent link">¶</a></h3>
+<ol>
+<li>
+<p>The <strong><a href="https://google.github.io/styleguide/go/guide">Style Guide</a></strong> outlines
+    the foundation of Go style at Google. This document is definitive and is
+    used as the basis for the recommendations in Style Decisions and Best
+    Practices.</p>
+</li>
+<li>
+<p><strong><a href="https://google.github.io/styleguide/go/decisions">Style Decisions</a></strong> is a
+    more verbose document that summarizes decisions on specific style points and
+    discusses the reasoning behind the decisions where appropriate.</p>
+<p>These decisions may occasionally change based on new data, new language
+features, new libraries, or emerging patterns, but it is not expected that
+individual Go programmers at Google should keep up-to-date with this
+document.</p>
+</li>
+<li>
+<p><strong><a href="https://google.github.io/styleguide/go/best-practices">Best Practices</a></strong>
+    documents some of the patterns that have evolved over time that solve common
+    problems, read well, and are robust to code maintenance needs.</p>
+<p>These best practices are not canonical, but Go programmers at Google are
+encouraged to use them where possible to keep the codebase uniform and
+consistent.</p>
+</li>
+</ol>
+<p>These documents intend to:</p>
+<ul>
+<li>Agree on a set of principles for weighing alternate styles</li>
+<li>Codify settled matters of Go style</li>
+<li>Document and provide canonical examples for Go idioms</li>
+<li>Document the pros and cons of various style decisions</li>
+<li>Help minimize surprises in Go readability reviews</li>
+<li>Help readability mentors use consistent terminology and guidance</li>
+</ul>
+<p>These documents do <strong>not</strong> intend to:</p>
+<ul>
+<li>Be an exhaustive list of comments that can be given in a readability review</li>
+<li>List all of the rules everyone is expected to remember and follow at all
+    times</li>
+<li>Replace good judgment in the use of language features and style</li>
+<li>Justify large-scale changes to get rid of style differences</li>
+</ul>
+<p>There will always be differences from one Go programmer to another and from one
+team’s codebase to another. However, it is in the best interest of Google and
+Alphabet that our codebase be as consistent as possible. (See
+<a href="guide/#consistency">guide</a> for more on consistency.) To that end, feel free to
+make style improvements as you see fit, but you do not need to nit-pick every
+violation of the Style Guide that you find. In particular, these documents may
+change over time, and that is no reason to cause extra churn in existing
+codebases; it suffices to write new code using the latest best practices and
+address nearby issues over time.</p>
+<p>It is important to recognize that issues of style are inherently personal and
+that there are always inherent trade-offs. Much of the guidance in these
+documents is subjective, but just like with <code>gofmt</code>, there is significant value
+in the uniformity they provide. As such, style recommendations will not be
+changed without due discourse, Go programmers at Google are encouraged to follow
+the style guide even where they might disagree.</p>
+<p><a id="definitions"></a></p>
+<h2 id="definitions">Definitions<a class="headerlink" href="#definitions" title="Permanent link">¶</a></h2>
+<p>The following words, which are used throughout the style documents, are defined
+below:</p>
+<ul>
+<li>
+<p><strong>Canonical</strong>: Establishes prescriptive and enduring rules
+    <a id="canonical"></a></p>
+<p>Within these documents, “canonical” is used to describe something that is
+considered a standard that all code (old and new) should follow and that is
+not expected to change substantially over time. Principles in the canonical
+documents should be understood by authors and reviewers alike, so everything
+included within a canonical document must meet a high bar. As such,
+canonical documents are generally shorter and prescribe fewer elements of
+style than non-canonical documents.</p>
+<p>https://google.github.io/styleguide/go#canonical</p>
+</li>
+<li>
+<p><strong>Normative</strong>: Intended to establish consistency <a id="normative"></a></p>
+<p>Within these documents, “normative” is used to describe something that is an
+agreed-upon element of style for use by Go code reviewers, in order that the
+suggestions, terminology, and justifications are consistent. These elements
+may change over time, and these documents will reflect such changes so that
+reviewers can remain consistent and up-to-date. Authors of Go code are not
+expected to be familiar with the normative documents, but the documents will
+frequently be used as a reference by reviewers in readability reviews.</p>
+<p>https://google.github.io/styleguide/go#normative</p>
+</li>
+<li>
+<p><strong>Idiomatic</strong>: Common and familiar <a id="idiomatic"></a></p>
+<p>Within these documents, “idiomatic” is used to refer to something that is
+prevalent in Go code and has become a familiar pattern that is easy to
+recognize. In general, an idiomatic pattern should be preferred to something
+unidiomatic if both serve the same purpose in context, as this is what will
+be the most familiar to readers.</p>
+<p>https://google.github.io/styleguide/go#idiomatic</p>
+</li>
+</ul>
+<p><a id="references"></a></p>
+<h2 id="additional-references">Additional references<a class="headerlink" href="#additional-references" title="Permanent link">¶</a></h2>
+<p>This guide assumes the reader is familiar with <a href="https://go.dev/doc/effective_go">Effective Go</a>, as it provides a
+common baseline for Go code across the entire Go community.</p>
+<p>Below are some additional resources for those looking to self-educate about Go
+style and for reviewers looking to provide further linkable context in their
+reviews. Participants in the Go readability process are not expected to be
+familiar with these resources, but they may arise as context in readability
+reviews.</p>
+<p><strong>External References</strong></p>
+<ul>
+<li><a href="https://go.dev/ref/spec">Go Language Specification</a></li>
+<li><a href="https://go.dev/doc/faq">Go FAQ</a></li>
+<li><a href="https://go.dev/ref/mem">Go Memory Model</a></li>
+<li><a href="https://research.swtch.com/godata">Go Data Structures</a></li>
+<li><a href="https://research.swtch.com/interfaces">Go Interfaces</a></li>
+<li>
+<p><a href="https://go-proverbs.github.io/">Go Proverbs</a></p>
+</li>
+<li>
+<p><a id="gotip"></a> Go Tip Episodes - stay tuned.</p>
+</li>
+<li>
+<p><a id="unit-testing-practices"></a> Unit Testing Practices - stay tuned.</p>
+</li>
+</ul>
+<p><strong>Relevant Testing-on-the-Toilet articles</strong></p>
+<ul>
+<li><a href="https://testing.googleblog.com/2017/10/code-health-identifiernamingpostforworl.html">TotT: Identifier Naming</a></li>
+<li><a href="https://testing.googleblog.com/2013/03/testing-on-toilet-testing-state-vs.html">TotT: Testing State vs. Testing Interactions</a></li>
+<li><a href="https://testing.googleblog.com/2014/05/testing-on-toilet-effective-testing.html">TotT: Effective Testing</a></li>
+<li><a href="https://testing.googleblog.com/2014/05/testing-on-toilet-risk-driven-testing.html">TotT: Risk-driven Testing</a></li>
+<li><a href="https://testing.googleblog.com/2015/01/testing-on-toilet-change-detector-tests.html">TotT: Change-detector Tests Considered Harmful</a></li>
+</ul>
+<p><strong>Additional External Writings</strong></p>
+<ul>
+<li><a href="https://research.swtch.com/dogma">Go and Dogma</a></li>
+<li><a href="https://commandcenter.blogspot.com/2012/06/less-is-exponentially-more.html">Less is exponentially more</a></li>
+<li><a href="https://commandcenter.blogspot.com/2011/12/esmereldas-imagination.html">Esmerelda’s Imagination</a></li>
+<li><a href="https://commandcenter.blogspot.com/2011/08/regular-expressions-in-lexing-and.html">Regular expressions for parsing</a></li>
+<li><a href="https://www.youtube.com/watch?v=PAAkCSZUG1c&amp;t=8m43s">Gofmt’s style is no one’s favorite, yet Gofmt is everyone’s favorite</a>
+    (YouTube)</li>
+</ul>
+<!--
+-->
+<p>{% endraw %}</p>
+<p>Note: This file is copy from google <a href="https://github.com/google/styleguide/tree/gh-pages/go">go style</a></p></div>
+</article>
+</div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+<button class="md-top md-icon" data-md-component="top" hidden="" type="button">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  Back to top
+</button>
+</main>
+<footer class="md-footer">
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.top", "navigation.prune", "search.highlight", "search.suggest", "content.code.annotate", "content.code.copy"], "search": "../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+<script src="../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</body>
+</html>
